@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Capivarias/ALP74LS283/simulation/qsim
+vALP74LS283
+Z1 !s110 1688128567
+!i10b 1
+!s100 N?Rc<a4`Ge;:3DN?zSkT:2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I2ibBJU:R_@fC8kXMAYGM33
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1688128566
+Z5 8ALP74LS283.vo
+Z6 FALP74LS283.vo
+!i122 4
+L0 32 559
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1688128567.000000
+Z9 !s107 ALP74LS283.vo|
+Z10 !s90 -work|work|ALP74LS283.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@a@l@p74@l@s283
+vALP74LS283_vlg_vec_tst
+R1
+!i10b 1
+!s100 dk37??71JM9?BT:b2<cz03
+R2
+IQRQJ[1@O4GGjhnZd2o0NO3
+R3
+R0
+w1688128565
+8ALP74LS283.vwf.vt
+FALP74LS283.vwf.vt
+!i122 5
+L0 30 134
+R7
+r1
+!s85 0
+31
+R8
+!s107 ALP74LS283.vwf.vt|
+!s90 -work|work|ALP74LS283.vwf.vt|
+!i113 1
+R11
+R12
+n@a@l@p74@l@s283_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 _Ul4kgzY^1GP1;hoPHal71
+R2
+I4_l`m?9N2:j1_CC1bWXGO2
+R3
+R0
+R4
+R5
+R6
+!i122 4
+L0 592 45
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12

@@ -1,0 +1,335 @@
+$comment
+	File created using the following command:
+		vcd file ALP74LS283.msim.vcd -direction
+$end
+$date
+	Fri Jun 30 09:36:07 2023
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module ALP74LS283_vlg_vec_tst $end
+$var reg 1 ! A1 $end
+$var reg 1 " A2 $end
+$var reg 1 # A3 $end
+$var reg 1 $ A4 $end
+$var reg 1 % B1 $end
+$var reg 1 & B2 $end
+$var reg 1 ' B3 $end
+$var reg 1 ( B4 $end
+$var reg 1 ) C0 $end
+$var wire 1 * C4 $end
+$var wire 1 + S1 $end
+$var wire 1 , S2 $end
+$var wire 1 - S3 $end
+$var wire 1 . S4 $end
+
+$scope module i1 $end
+$var wire 1 / gnd $end
+$var wire 1 0 vcc $end
+$var wire 1 1 unknown $end
+$var tri1 1 2 devclrn $end
+$var tri1 1 3 devpor $end
+$var tri1 1 4 devoe $end
+$var wire 1 5 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 6 ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 7 ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 8 S1~output_o $end
+$var wire 1 9 S2~output_o $end
+$var wire 1 : S3~output_o $end
+$var wire 1 ; S4~output_o $end
+$var wire 1 < C4~output_o $end
+$var wire 1 = C0~input_o $end
+$var wire 1 > B1~input_o $end
+$var wire 1 ? A1~input_o $end
+$var wire 1 @ inst49~0_combout $end
+$var wire 1 A B2~input_o $end
+$var wire 1 B inst16~0_combout $end
+$var wire 1 C A2~input_o $end
+$var wire 1 D inst29~0_combout $end
+$var wire 1 E inst40~combout $end
+$var wire 1 F B3~input_o $end
+$var wire 1 G A3~input_o $end
+$var wire 1 H inst41~combout $end
+$var wire 1 I inst9~0_combout $end
+$var wire 1 J inst~0_combout $end
+$var wire 1 K inst12~combout $end
+$var wire 1 L inst13~0_combout $end
+$var wire 1 M inst13~1_combout $end
+$var wire 1 N B4~input_o $end
+$var wire 1 O A4~input_o $end
+$var wire 1 P inst13~2_combout $end
+$var wire 1 Q inst14~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+1"
+1#
+0$
+1%
+1&
+1'
+1(
+0)
+1*
+0+
+1,
+1-
+0.
+0/
+10
+x1
+12
+13
+14
+05
+z6
+z7
+08
+19
+1:
+0;
+1<
+0=
+1>
+1?
+0@
+1A
+0B
+1C
+0D
+0E
+1F
+1G
+1H
+0I
+0J
+0K
+1L
+1M
+1N
+0O
+0P
+1Q
+$end
+#100000
+1$
+0#
+0"
+0%
+0>
+0C
+0G
+1O
+1D
+0H
+1E
+1K
+1@
+1P
+1;
+18
+0:
+09
+1J
+0E
+0L
+0,
+0-
+1+
+1.
+19
+0K
+0M
+1,
+1:
+1-
+0P
+0;
+0.
+#200000
+0!
+0(
+0'
+0$
+1#
+1G
+0O
+0F
+0N
+0?
+1B
+0Q
+0@
+08
+0<
+0*
+0+
+#300000
+0&
+1!
+1(
+0#
+0G
+1N
+1?
+0A
+1K
+0B
+1I
+1E
+1P
+1@
+18
+1;
+09
+0:
+0-
+0,
+1.
+1+
+#400000
+1'
+0!
+1#
+1G
+0?
+1F
+1M
+1B
+0@
+08
+0+
+1Q
+0P
+0;
+1<
+1*
+0.
+#500000
+1)
+1%
+1$
+1&
+0'
+0#
+0G
+0F
+1A
+1O
+1>
+1=
+0M
+0I
+0E
+1L
+0D
+0B
+1P
+1;
+19
+0J
+1E
+1,
+1.
+0P
+0;
+09
+0K
+0,
+0.
+1:
+1-
+#600000
+1"
+1!
+0$
+0O
+1?
+1C
+1H
+0E
+0Q
+1P
+1@
+18
+1;
+0<
+19
+1,
+0*
+1.
+1+
+#700000
+0(
+1'
+1#
+1$
+1O
+1G
+1F
+0N
+1M
+1Q
+0P
+0;
+1<
+1*
+0.
+#800000
+0%
+0"
+0!
+0$
+0O
+0?
+0C
+0>
+1B
+0H
+1E
+0Q
+1P
+1;
+0<
+09
+1J
+0E
+0L
+0,
+0*
+1.
+19
+1K
+1,
+0:
+0-
+#900000
+0&
+1(
+0'
+1"
+1$
+1O
+1C
+0F
+1N
+0A
+0M
+0K
+1Q
+1<
+1:
+1-
+1*
+0P
+0;
+0.
+#1000000
