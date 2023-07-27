@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dD:/Projetos_Quartus/Capivarias/ALP74LS173/simulation/qsim
 vALP74LS173
-Z1 !s110 1690422611
+Z1 !s110 1690474838
 !i10b 1
-!s100 O7O8SFQeS>TElh`Ph_k;b3
+!s100 ZfGkTddS5[D[?>m=S227c2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IQeb@L42bnaJfBoV`bhaC]1
+IBlA]UOCm^eUeQnal4dY>C1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z4 w1690422610
+Z4 w1690474836
 Z5 8ALP74LS173.vo
 Z6 FALP74LS173.vo
-!i122 92
+!i122 94
 L0 32 538
 Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1690422611.000000
+Z8 !s108 1690474837.000000
 Z9 !s107 ALP74LS173.vo|
 Z10 !s90 -work|work|ALP74LS173.vo|
 !i113 1
@@ -41,16 +41,16 @@ R2
 IOl6a?TI6T4gNPl?K:LP4f1
 R3
 R0
-w1690422609
+w1690474835
 8output_files/Waveform.vwf.vt
 Foutput_files/Waveform.vwf.vt
-!i122 93
+!i122 95
 L0 30 102
 R7
 r1
 !s85 0
 31
-R8
+!s108 1690474838.000000
 !s107 output_files/Waveform.vwf.vt|
 !s90 -work|work|output_files/Waveform.vwf.vt|
 !i113 1
@@ -68,7 +68,7 @@ R0
 R4
 R5
 R6
-!i122 92
+!i122 94
 L0 571 45
 R7
 r1

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Jul 26 21:26:35 2023
+Analysis & Synthesis Status : Successful - Thu Jul 27 13:20:08 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : ALP74LS173
 Top-level Entity Name : ALP74LS173
 Family : MAX 10
-Total logic elements : 9
-    Total combinational functions : 5
+Total logic elements : 6
+    Total combinational functions : 2
     Dedicated logic registers : 4
 Total registers : 4
 Total pins : 14

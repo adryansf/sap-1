@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Jul 26 21:26:41 2023
+Fitter Status : Successful - Thu Jul 27 13:20:17 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : ALP74LS173
 Top-level Entity Name : ALP74LS173
 Family : MAX 10
 Device : 10M08DAF484C8G
 Timing Models : Final
-Total logic elements : 6 / 8,064 ( < 1 % )
-    Total combinational functions : 6 / 8,064 ( < 1 % )
+Total logic elements : 7 / 8,064 ( < 1 % )
+    Total combinational functions : 3 / 8,064 ( < 1 % )
     Dedicated logic registers : 4 / 8,064 ( < 1 % )
 Total registers : 4
 Total pins : 14 / 250 ( 6 % )

@@ -3,7 +3,7 @@ $comment
 		vcd file ALP74LS173.msim.vcd -direction
 $end
 $date
-	Wed Jul 26 22:50:11 2023
+	Thu Jul 27 13:20:38 2023
 $end
 $version
 	ModelSim Version 2020.1
@@ -42,27 +42,27 @@ $var wire 1 8 Q0~output_o $end
 $var wire 1 9 Q1~output_o $end
 $var wire 1 : Q2~output_o $end
 $var wire 1 ; Q3~output_o $end
-$var wire 1 < OE1~input_o $end
-$var wire 1 = CP~input_o $end
-$var wire 1 > CP~inputclkctrl_outclk $end
-$var wire 1 ? D0~input_o $end
-$var wire 1 @ MR~input_o $end
-$var wire 1 A MR~inputclkctrl_outclk $end
+$var wire 1 < CP~input_o $end
+$var wire 1 = CP~inputclkctrl_outclk $end
+$var wire 1 > D0~input_o $end
+$var wire 1 ? MR~input_o $end
+$var wire 1 @ MR~inputclkctrl_outclk $end
+$var wire 1 A IE1~input_o $end
 $var wire 1 B IE2~input_o $end
-$var wire 1 C IE1~input_o $end
-$var wire 1 D inst~combout $end
-$var wire 1 E inst20~q $end
-$var wire 1 F OE2~input_o $end
-$var wire 1 G inst17~0_combout $end
+$var wire 1 C inst~combout $end
+$var wire 1 D inst20~q $end
+$var wire 1 E OE2~input_o $end
+$var wire 1 F OE1~input_o $end
+$var wire 1 G inst18~combout $end
 $var wire 1 H D1~input_o $end
-$var wire 1 I inst21~q $end
-$var wire 1 J inst19~0_combout $end
+$var wire 1 I inst21~feeder_combout $end
+$var wire 1 J inst21~q $end
 $var wire 1 K D2~input_o $end
-$var wire 1 L inst22~q $end
-$var wire 1 M inst26~0_combout $end
+$var wire 1 L inst22~feeder_combout $end
+$var wire 1 M inst22~q $end
 $var wire 1 N D3~input_o $end
-$var wire 1 O inst23~q $end
-$var wire 1 P inst28~0_combout $end
+$var wire 1 O inst23~feeder_combout $end
+$var wire 1 P inst23~q $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -95,88 +95,100 @@ z7
 09
 0:
 0;
-0<
+x<
 x=
 x>
-x?
+1?
 1@
-1A
+xA
 xB
 xC
-xD
+0D
 0E
 0F
 1G
 xH
-0I
-1J
+xI
+0J
 xK
-0L
-1M
+xL
+0M
 xN
-0O
-1P
+xO
+0P
 $end
 #30000
 0!
 0(
+0?
+0<
 0@
 0=
-0A
-0>
 #60000
 1&
-1C
-0D
+1A
+0C
 #70000
 1!
+1<
 1=
-1>
 #80000
 0!
+0<
 0=
-0>
 #90000
 1'
 x&
-xC
+xA
 1B
 #100000
 1!
+1<
 1=
-1>
 #110000
 0!
+0<
 0=
-0>
 #120000
 0"
 0'
 0&
-0C
+0A
 0B
-0?
-1D
+0>
+1C
 #130000
 1!
+1<
 1=
-1>
+xP
+xM
+xJ
+x9
+x:
+x;
+x.
+x-
+x,
 #140000
 0!
+0<
 0=
-0>
 #150000
 1"
-1?
+1>
 #160000
 1!
+1<
 1=
-1>
+1D
+18
+1+
 #170000
 0!
+0<
 0=
-0>
 #180000
 0"
-0?
+0>
 #1000000

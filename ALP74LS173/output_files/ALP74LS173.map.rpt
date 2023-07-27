@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALP74LS173
-Wed Jul 26 21:26:35 2023
+Thu Jul 27 13:20:08 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,13 +43,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 26 21:26:35 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 27 13:20:08 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; ALP74LS173                                  ;
 ; Top-level Entity Name              ; ALP74LS173                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 9                                           ;
-;     Total combinational functions  ; 5                                           ;
+; Total logic elements               ; 6                                           ;
+;     Total combinational functions  ; 2                                           ;
 ;     Dedicated logic registers      ; 4                                           ;
 ; Total registers                    ; 4                                           ;
 ; Total pins                         ; 14                                          ;
@@ -173,36 +173,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 9     ;
-;                                             ;       ;
-; Total combinational functions               ; 5     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 4     ;
-;     -- <=2 input functions                  ; 1     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 5     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 4     ;
-;     -- Dedicated logic registers            ; 4     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 14    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; inst  ;
-; Maximum fan-out                             ; 4     ;
-; Total fan-out                               ; 48    ;
-; Average fan-out                             ; 1.30  ;
-+---------------------------------------------+-------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 6      ;
+;                                             ;        ;
+; Total combinational functions               ; 2      ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 0      ;
+;     -- 3 input functions                    ; 0      ;
+;     -- <=2 input functions                  ; 2      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 2      ;
+;     -- arithmetic mode                      ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 4      ;
+;     -- Dedicated logic registers            ; 4      ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 14     ;
+;                                             ;        ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; inst18 ;
+; Maximum fan-out                             ; 4      ;
+; Total fan-out                               ; 42     ;
+; Average fan-out                             ; 1.24   ;
++---------------------------------------------+--------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |ALP74LS173                ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 14   ; 0            ; 0          ; |ALP74LS173         ; ALP74LS173  ; work         ;
+; |ALP74LS173                ; 2 (2)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 14   ; 0            ; 0          ; |ALP74LS173         ; ALP74LS173  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -238,14 +238,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; boundary_port         ; 14                          ;
 ; cycloneiii_ff         ; 4                           ;
 ;     ENA CLR           ; 4                           ;
-; cycloneiii_lcell_comb ; 9                           ;
-;     normal            ; 9                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 4                           ;
+; cycloneiii_io_obuf    ; 4                           ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
+;         2 data inputs ; 2                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.35                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.30                        ;
 +-----------------------+-----------------------------+
 
 
@@ -264,29 +263,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Jul 26 21:26:25 2023
+    Info: Processing started: Thu Jul 27 13:19:57 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALP74LS173 -c ALP74LS173
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alp74ls173.bdf
     Info (12023): Found entity 1: ALP74LS173
 Info (12127): Elaborating entity "ALP74LS173" for the top level hierarchy
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "inst17" to the node "Q0" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "inst19" to the node "Q1" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "inst26" to the node "Q2" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "inst28" to the node "Q3" into an OR gate
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 23 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 9 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4768 megabytes
-    Info: Processing ended: Wed Jul 26 21:26:35 2023
-    Info: Elapsed time: 00:00:10
+    Info (21061): Implemented 6 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4763 megabytes
+    Info: Processing ended: Thu Jul 27 13:20:08 2023
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:25
 
 
