@@ -1,0 +1,20 @@
+|ALP74LS173
+Q0 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+MR => inst1.IN0
+CP => inst20.CLK
+CP => inst21.CLK
+CP => inst22.CLK
+CP => inst23.CLK
+IE1 => inst.IN0
+IE2 => inst.IN1
+D0 => inst13.IN1
+OE1 => inst18.IN0
+OE2 => inst18.IN1
+Q1 <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst10.IN1
+Q2 <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst7.IN1
+Q3 <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst3.IN1
+
+

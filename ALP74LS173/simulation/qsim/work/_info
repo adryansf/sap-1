@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Projetos_Quartus/Capivarias/ALP74LS173/simulation/qsim
+vALP74LS173
+Z1 !s110 1690474838
+!i10b 1
+!s100 ZfGkTddS5[D[?>m=S227c2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IBlA]UOCm^eUeQnal4dY>C1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1690474836
+Z5 8ALP74LS173.vo
+Z6 FALP74LS173.vo
+!i122 94
+L0 32 538
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1690474837.000000
+Z9 !s107 ALP74LS173.vo|
+Z10 !s90 -work|work|ALP74LS173.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@a@l@p74@l@s173
+vALP74LS173_vlg_vec_tst
+R1
+!i10b 1
+!s100 d2BJIBNCmAdWNaok3_<DA2
+R2
+IOl6a?TI6T4gNPl?K:LP4f1
+R3
+R0
+w1690474835
+8output_files/Waveform.vwf.vt
+Foutput_files/Waveform.vwf.vt
+!i122 95
+L0 30 102
+R7
+r1
+!s85 0
+31
+!s108 1690474838.000000
+!s107 output_files/Waveform.vwf.vt|
+!s90 -work|work|output_files/Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@a@l@p74@l@s173_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 i^dY]XMY>ln2AW_99>dOl2
+R2
+I=_mDSj7VX=A[Jh=LWoSSG3
+R3
+R0
+R4
+R5
+R6
+!i122 94
+L0 571 45
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
