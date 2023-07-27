@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLK'
+Slack : -0.957
+TNS   : -0.957
+
+Type  : Slow 1200mV 85C Model Setup 'ALP74LS107:inst3|inst'
+Slack : -0.616
+TNS   : -0.616
+
+Type  : Slow 1200mV 85C Model Setup 'ALP74LS107:inst|inst'
+Slack : -0.446
+TNS   : -0.446
+
+Type  : Slow 1200mV 85C Model Setup 'ALP74LS107:inst4|inst'
+Slack : 0.261
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ALP74LS107:inst4|inst'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ALP74LS107:inst|inst'
+Slack : 0.609
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ALP74LS107:inst3|inst'
+Slack : 0.689
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.706
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ALP74LS107:inst3|inst'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ALP74LS107:inst4|inst'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ALP74LS107:inst|inst'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Setup 'CLK'
+Slack : -0.813
+TNS   : -0.813
+
+Type  : Slow 1200mV 0C Model Setup 'ALP74LS107:inst3|inst'
+Slack : -0.539
+TNS   : -0.539
+
+Type  : Slow 1200mV 0C Model Setup 'ALP74LS107:inst|inst'
+Slack : -0.408
+TNS   : -0.408
+
+Type  : Slow 1200mV 0C Model Setup 'ALP74LS107:inst4|inst'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ALP74LS107:inst4|inst'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ALP74LS107:inst|inst'
+Slack : 0.584
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.613
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ALP74LS107:inst3|inst'
+Slack : 0.653
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ALP74LS107:inst3|inst'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ALP74LS107:inst4|inst'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ALP74LS107:inst|inst'
+Slack : -1.487
+TNS   : -1.487
+
+Type  : Fast 1200mV 0C Model Setup 'CLK'
+Slack : -0.157
+TNS   : -0.157
+
+Type  : Fast 1200mV 0C Model Setup 'ALP74LS107:inst3|inst'
+Slack : 0.134
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ALP74LS107:inst|inst'
+Slack : 0.227
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ALP74LS107:inst4|inst'
+Slack : 0.694
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ALP74LS107:inst|inst'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ALP74LS107:inst4|inst'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ALP74LS107:inst3|inst'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -4.069
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ALP74LS107:inst3|inst'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ALP74LS107:inst4|inst'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ALP74LS107:inst|inst'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------
