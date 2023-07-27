@@ -1,0 +1,15 @@
+|ALP74LS126
+O1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst.DATAIN
+EP => inst.OE
+EP => inst2.OE
+EP => inst3.OE
+EP => inst4.OE
+O2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+I2 => inst2.DATAIN
+O3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+I3 => inst3.DATAIN
+O4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+I4 => inst4.DATAIN
+
+
