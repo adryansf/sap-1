@@ -1,0 +1,81 @@
+|acumulador
+Q7 <= ALP74LS173:inst2.Q3
+D4 => ALP74LS173:inst2.D0
+D5 => ALP74LS173:inst2.D1
+D6 => ALP74LS173:inst2.D2
+D7 => ALP74LS173:inst2.D3
+La => ALP74LS173:inst2.IE1
+La => ALP74LS173:inst2.IE2
+La => ALP74LS173:inst1.IE1
+La => ALP74LS173:inst1.IE2
+CLK => ALP74LS173:inst2.CP
+CLK => ALP74LS173:inst1.CP
+Q0 <= ALP74LS173:inst1.Q0
+D0 => ALP74LS173:inst1.D0
+D1 => ALP74LS173:inst1.D1
+D2 => ALP74LS173:inst1.D2
+D3 => ALP74LS173:inst1.D3
+Q1 <= ALP74LS173:inst1.Q1
+Q2 <= ALP74LS173:inst1.Q2
+Q3 <= ALP74LS173:inst1.Q3
+Q4 <= ALP74LS173:inst2.Q0
+Q5 <= ALP74LS173:inst2.Q1
+Q6 <= ALP74LS173:inst2.Q2
+S7 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Ea => inst5.OE
+Ea => inst6.OE
+Ea => inst7.OE
+Ea => inst8.OE
+Ea => inst9.OE
+Ea => inst10.OE
+Ea => inst11.OE
+Ea => inst12.OE
+S6 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+S5 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+S4 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+S3 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+S2 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+S1 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+S0 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|acumulador|ALP74LS173:inst2
+Q0 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+MR => inst1.IN0
+CP => inst20.CLK
+CP => inst21.CLK
+CP => inst22.CLK
+CP => inst23.CLK
+IE1 => inst.IN0
+IE2 => inst.IN1
+D0 => inst13.IN1
+OE1 => inst18.IN0
+OE2 => inst18.IN1
+Q1 <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst10.IN1
+Q2 <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst7.IN1
+Q3 <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst3.IN1
+
+
+|acumulador|ALP74LS173:inst1
+Q0 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+MR => inst1.IN0
+CP => inst20.CLK
+CP => inst21.CLK
+CP => inst22.CLK
+CP => inst23.CLK
+IE1 => inst.IN0
+IE2 => inst.IN1
+D0 => inst13.IN1
+OE1 => inst18.IN0
+OE2 => inst18.IN1
+Q1 <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst10.IN1
+Q2 <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst7.IN1
+Q3 <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst3.IN1
+
+

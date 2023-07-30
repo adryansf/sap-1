@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/componentes-quartus-sap1/sap-1/acumulador/simulation/qsim
+vacumulador
+Z1 !s110 1690760415
+!i10b 1
+!s100 C7:T3J7Gc[=dzem?0J=ZQ0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IQCZ3o]j:h[2cOzB7T4Y[C2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1690760414
+8acumulador.vo
+Facumulador.vo
+!i122 6
+L0 32 862
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1690760415.000000
+!s107 acumulador.vo|
+!s90 -work|work|acumulador.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vacumulador_vlg_vec_tst
+R1
+!i10b 1
+!s100 Q9CER]Sa81_5dPjg95H040
+R2
+IgS>8_Q6dfU66[g2b1c=Fc2
+R3
+R0
+w1690760413
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 7
+L0 30 706
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R6
+R7
