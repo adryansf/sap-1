@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Jul 30 20:40:12 2023
+    Info: Processing started: Wed Aug 02 00:02:24 2023
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off acumulador -c acumulador --vector_source=D:/componentes-quartus-sap1/sap-1/acumulador/Waveform.vwf --testbench_file=D:/componentes-quartus-sap1/sap-1/acumulador/simulation/qsim/Waveform.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -55,14 +55,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Jul 30 20:40:13 2023
+    Info: Processing started: Wed Aug 02 00:02:25 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/componentes-quartus-sap1/sap-1/acumulador/simulation/qsim/ acumulador -c acumulador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file acumulador.vo in folder "D:/componentes-quartus-sap1/sap-1/acumulador/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Sun Jul 30 20:40:14 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Wed Aug 02 00:02:25 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -85,27 +85,27 @@ Reading pref.tcl
 
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:40:15 on Jul 30,2023
+# Start time: 00:02:26 on Aug 02,2023
 # vlog -work work acumulador.vo 
 # -- Compiling module acumulador
 # 
 # Top level modules:
 # 	acumulador
-# End time: 20:40:15 on Jul 30,2023, Elapsed time: 0:00:00
+# End time: 00:02:26 on Aug 02,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:40:15 on Jul 30,2023
-# vlog -work work Waveform.vwf.vt 
 
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:02:26 on Aug 02,2023
+# vlog -work work Waveform.vwf.vt 
 # -- Compiling module acumulador_vlg_vec_tst
 # 
 # Top level modules:
 # 	acumulador_vlg_vec_tst
-# End time: 20:40:15 on Jul 30,2023, Elapsed time: 0:00:00
+# End time: 00:02:26 on Aug 02,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.acumulador_vlg_vec_tst 
-# Start time: 20:40:15 on Jul 30,2023
+# Start time: 00:02:26 on Aug 02,2023
 # Loading work.acumulador_vlg_vec_tst
 # Loading work.acumulador
 # Loading cyclonev_ver.cyclonev_io_obuf
@@ -117,7 +117,7 @@ Reading pref.tcl
 # after#25
 # ** Note: $finish    : Waveform.vwf.vt(95)
 #    Time: 1 us  Iteration: 0  Instance: /acumulador_vlg_vec_tst
-# End time: 20:40:15 on Jul 30,2023, Elapsed time: 0:00:00
+# End time: 00:02:27 on Aug 02,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -130,7 +130,7 @@ Reading D:/componentes-quartus-sap1/sap-1/acumulador/simulation/qsim/acumulador.
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/componentes-quartus-sap1/sap-1/acumulador/simulation/qsim/acumulador_20230730204015.sim.vwf
+Writing the resulting VWF to D:/componentes-quartus-sap1/sap-1/acumulador/simulation/qsim/acumulador_20230802000227.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+source_file = 1, D:/componentes-quartus-sap1/sap-1/acumulador/acumulador.bsf
 source_file = 1, D:/componentes-quartus-sap1/sap-1/acumulador/ALP74LS173.bdf
 source_file = 1, D:/componentes-quartus-sap1/sap-1/acumulador/acumulador.bdf
 source_file = 1, D:/componentes-quartus-sap1/sap-1/acumulador/db/acumulador.cbx.xml
