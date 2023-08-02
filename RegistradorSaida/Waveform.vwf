@@ -1,0 +1,4728 @@
+/*<simulation_settings>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off RegistradorSaida -c RegistradorSaida --vector_source="D:/componentes-quartus-sap1/sap-1/RegistradorSaida/Waveform.vwf" --testbench_file="D:/componentes-quartus-sap1/sap-1/RegistradorSaida/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off RegistradorSaida -c RegistradorSaida --vector_source="D:/componentes-quartus-sap1/sap-1/RegistradorSaida/Waveform.vwf" --testbench_file="D:/componentes-quartus-sap1/sap-1/RegistradorSaida/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/componentes-quartus-sap1/sap-1/RegistradorSaida/simulation/qsim/" RegistradorSaida -c RegistradorSaida</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="D:/componentes-quartus-sap1/sap-1/RegistradorSaida/simulation/qsim/" RegistradorSaida -c RegistradorSaida</tnetlist_cmd>
+<modelsim_script>onerror {exit -code 1}
+vlib work
+vlog -work work RegistradorSaida.vo
+vlog -work work Waveform.vwf.vt
+vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.RegistradorSaida_vlg_vec_tst
+vcd file -direction RegistradorSaida.msim.vcd
+vcd add -internal RegistradorSaida_vlg_vec_tst/*
+vcd add -internal RegistradorSaida_vlg_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f
+</modelsim_script>
+<modelsim_script_timing>onerror {exit -code 1}
+vlib work
+vlog -work work RegistradorSaida.vo
+vlog -work work Waveform.vwf.vt
+vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.RegistradorSaida_vlg_vec_tst
+vcd file -direction RegistradorSaida.msim.vcd
+vcd add -internal RegistradorSaida_vlg_vec_tst/*
+vcd add -internal RegistradorSaida_vlg_vec_tst/i1/*
+proc simTimestamp {} {
+    echo "Simulation time: $::now ps"
+    if { [string equal running [runStatus]] } {
+        after 2500 simTimestamp
+    }
+}
+after 2500 simTimestamp
+run -all
+quit -f
+</modelsim_script_timing>
+<hdl_lang>verilog</hdl_lang>
+</simulation_settings>*/
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 1000.0;
+	SIMULATION_TIME = 0.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("CLK")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("D0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("D1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("D2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("D3")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("D4")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("D5")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("D6")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("D7")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("negL0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q3")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q4")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q5")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q6")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q7")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("CLK")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2.337;
+		LEVEL 1 FOR 3.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.8;
+			LEVEL 1 FOR 3.2;
+		}
+		LEVEL 0 FOR 4.463;
+		LEVEL 1 FOR 2.959;
+		LEVEL 0 FOR 9.4;
+		LEVEL 1 FOR 8.229;
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 3.199;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 2.613;
+		LEVEL 0 FOR 2.527;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 1.888;
+		LEVEL 1 FOR 2.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 2.0;
+		}
+		LEVEL 0 FOR 2.854;
+		LEVEL 1 FOR 0.395;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 7.548;
+		LEVEL 0 FOR 8.0;
+		LEVEL 1 FOR 10.458;
+		LEVEL 0 FOR 4.1;
+		LEVEL 1 FOR 2.7;
+		LEVEL 0 FOR 2.079;
+		LEVEL 1 FOR 3.266;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 1.323;
+		LEVEL 1 FOR 0.247;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.867;
+			LEVEL 1 FOR 3.799;
+		}
+		LEVEL 0 FOR 2.867;
+		LEVEL 1 FOR 7.783;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 4.4;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 0.866;
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 0.339;
+		LEVEL 0 FOR 10.748;
+		LEVEL 1 FOR 6.8;
+		LEVEL 0 FOR 2.452;
+		LEVEL 1 FOR 0.424;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.667;
+			LEVEL 1 FOR 3.999;
+		}
+		LEVEL 0 FOR 2.667;
+		LEVEL 1 FOR 4.954;
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 1.899;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1.434;
+			LEVEL 1 FOR 1.899;
+		}
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 0.523;
+		LEVEL 0 FOR 2.556;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 6.579;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 0.834;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.5;
+			LEVEL 1 FOR 3.5;
+		}
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 2.4;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 1.547;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 1.053;
+		LEVEL 0 FOR 3.83;
+		LEVEL 1 FOR 4.7;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.3;
+			LEVEL 1 FOR 4.7;
+		}
+		LEVEL 0 FOR 1.47;
+		LEVEL 1 FOR 7.392;
+		LEVEL 0 FOR 9.2;
+		LEVEL 1 FOR 3.408;
+		LEVEL 0 FOR 1.855;
+		LEVEL 1 FOR 2.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.8;
+			LEVEL 1 FOR 2.2;
+		}
+		LEVEL 0 FOR 1.822;
+		LEVEL 1 FOR 4.3;
+		LEVEL 0 FOR 4.823;
+		LEVEL 1 FOR 0.15;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.15;
+			LEVEL 1 FOR 1.85;
+		}
+		LEVEL 0 FOR 3.15;
+		LEVEL 1 FOR 1.7;
+		LEVEL 0 FOR 2.04;
+		LEVEL 1 FOR 1.166;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.167;
+			LEVEL 1 FOR 1.166;
+		}
+		LEVEL 0 FOR 0.128;
+		LEVEL 1 FOR 0.676;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 0.624;
+		LEVEL 0 FOR 0.422;
+		LEVEL 1 FOR 1.299;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 4.199;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 3.114;
+		LEVEL 1 FOR 2.801;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 3.849;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 5.331;
+		LEVEL 1 FOR 7.4;
+		LEVEL 0 FOR 12.304;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 4.966;
+		LEVEL 1 FOR 2.066;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.6;
+			LEVEL 1 FOR 2.066;
+		}
+		LEVEL 0 FOR 2.385;
+		LEVEL 1 FOR 3.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.2;
+			LEVEL 1 FOR 3.8;
+		}
+		LEVEL 0 FOR 4.716;
+		LEVEL 1 FOR 0.283;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.6;
+			LEVEL 1 FOR 1.733;
+		}
+		LEVEL 0 FOR 1.6;
+		LEVEL 1 FOR 1.451;
+		LEVEL 0 FOR 1.409;
+		LEVEL 1 FOR 3.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.067;
+			LEVEL 1 FOR 3.599;
+		}
+		LEVEL 0 FOR 3.289;
+		LEVEL 1 FOR 2.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.6;
+			LEVEL 1 FOR 2.4;
+		}
+		LEVEL 0 FOR 3.87;
+		LEVEL 1 FOR 2.733;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.933;
+			LEVEL 1 FOR 2.733;
+		}
+		LEVEL 0 FOR 1.036;
+		LEVEL 1 FOR 0.153;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 12.38;
+		LEVEL 0 FOR 10.6;
+		LEVEL 1 FOR 2.472;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 1.6;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 6.099;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 3.58;
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 2.599;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.067;
+			LEVEL 1 FOR 2.599;
+		}
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 1.587;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.2;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.131;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 3.4;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 2.467;
+		LEVEL 0 FOR 0.252;
+		LEVEL 1 FOR 3.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.6;
+			LEVEL 1 FOR 3.4;
+		}
+		LEVEL 0 FOR 10.392;
+		LEVEL 1 FOR 3.8;
+		LEVEL 0 FOR 2.156;
+		LEVEL 1 FOR 8.582;
+		LEVEL 0 FOR 9.0;
+		LEVEL 1 FOR 2.418;
+		LEVEL 0 FOR 2.269;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.9;
+			LEVEL 1 FOR 2.1;
+		}
+		LEVEL 0 FOR 0.631;
+		LEVEL 1 FOR 1.156;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.9;
+			LEVEL 1 FOR 3.1;
+		}
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 1.944;
+		LEVEL 0 FOR 5.235;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.026;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.201;
+		LEVEL 1 FOR 4.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.6;
+			LEVEL 1 FOR 4.4;
+		}
+		LEVEL 0 FOR 6.514;
+		LEVEL 1 FOR 1.499;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.834;
+			LEVEL 1 FOR 1.499;
+		}
+		LEVEL 0 FOR 4.172;
+		LEVEL 1 FOR 7.8;
+		LEVEL 0 FOR 8.412;
+		LEVEL 1 FOR 1.466;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.867;
+			LEVEL 1 FOR 1.466;
+		}
+		LEVEL 0 FOR 3.456;
+		LEVEL 1 FOR 4.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.2;
+			LEVEL 1 FOR 4.8;
+		}
+		LEVEL 0 FOR 3.488;
+		LEVEL 1 FOR 3.763;
+		LEVEL 0 FOR 8.2;
+		LEVEL 1 FOR 14.091;
+		LEVEL 0 FOR 12.4;
+		LEVEL 1 FOR 1.546;
+		LEVEL 0 FOR 1.103;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 3.032;
+		LEVEL 1 FOR 0.814;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 4.675;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 1.011;
+	}
+}
+
+TRANSITION_LIST("D0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2.337;
+		LEVEL 1 FOR 3.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.8;
+			LEVEL 1 FOR 3.2;
+		}
+		LEVEL 0 FOR 4.463;
+		LEVEL 1 FOR 2.959;
+		LEVEL 0 FOR 9.4;
+		LEVEL 1 FOR 8.229;
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 3.199;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 2.613;
+		LEVEL 0 FOR 2.527;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 1.888;
+		LEVEL 1 FOR 2.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 2.0;
+		}
+		LEVEL 0 FOR 2.854;
+		LEVEL 1 FOR 0.395;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 7.548;
+		LEVEL 0 FOR 8.0;
+		LEVEL 1 FOR 10.458;
+		LEVEL 0 FOR 4.1;
+		LEVEL 1 FOR 2.7;
+		LEVEL 0 FOR 2.079;
+		LEVEL 1 FOR 3.266;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 1.323;
+		LEVEL 1 FOR 0.247;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.867;
+			LEVEL 1 FOR 3.799;
+		}
+		LEVEL 0 FOR 2.867;
+		LEVEL 1 FOR 7.783;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 4.4;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 0.866;
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 0.339;
+		LEVEL 0 FOR 10.748;
+		LEVEL 1 FOR 6.8;
+		LEVEL 0 FOR 2.452;
+		LEVEL 1 FOR 0.424;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.667;
+			LEVEL 1 FOR 3.999;
+		}
+		LEVEL 0 FOR 2.667;
+		LEVEL 1 FOR 4.954;
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 1.899;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1.434;
+			LEVEL 1 FOR 1.899;
+		}
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 0.523;
+		LEVEL 0 FOR 2.556;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 6.579;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 0.834;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.5;
+			LEVEL 1 FOR 3.5;
+		}
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 2.4;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 1.547;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 1.053;
+		LEVEL 0 FOR 3.83;
+		LEVEL 1 FOR 4.7;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.3;
+			LEVEL 1 FOR 4.7;
+		}
+		LEVEL 0 FOR 1.47;
+		LEVEL 1 FOR 7.392;
+		LEVEL 0 FOR 9.2;
+		LEVEL 1 FOR 3.408;
+		LEVEL 0 FOR 1.855;
+		LEVEL 1 FOR 2.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.8;
+			LEVEL 1 FOR 2.2;
+		}
+		LEVEL 0 FOR 1.822;
+		LEVEL 1 FOR 4.3;
+		LEVEL 0 FOR 4.823;
+		LEVEL 1 FOR 0.15;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.15;
+			LEVEL 1 FOR 1.85;
+		}
+		LEVEL 0 FOR 3.15;
+		LEVEL 1 FOR 1.7;
+		LEVEL 0 FOR 2.04;
+		LEVEL 1 FOR 1.166;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.167;
+			LEVEL 1 FOR 1.166;
+		}
+		LEVEL 0 FOR 0.128;
+		LEVEL 1 FOR 0.676;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 0.624;
+		LEVEL 0 FOR 0.422;
+		LEVEL 1 FOR 1.299;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 4.199;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 3.114;
+		LEVEL 1 FOR 2.801;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 3.849;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 5.331;
+		LEVEL 1 FOR 7.4;
+		LEVEL 0 FOR 12.304;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 4.966;
+		LEVEL 1 FOR 2.066;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.6;
+			LEVEL 1 FOR 2.066;
+		}
+		LEVEL 0 FOR 2.385;
+		LEVEL 1 FOR 3.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.2;
+			LEVEL 1 FOR 3.8;
+		}
+		LEVEL 0 FOR 4.716;
+		LEVEL 1 FOR 0.283;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.6;
+			LEVEL 1 FOR 1.733;
+		}
+		LEVEL 0 FOR 1.6;
+		LEVEL 1 FOR 1.451;
+		LEVEL 0 FOR 1.409;
+		LEVEL 1 FOR 3.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.067;
+			LEVEL 1 FOR 3.599;
+		}
+		LEVEL 0 FOR 3.289;
+		LEVEL 1 FOR 2.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.6;
+			LEVEL 1 FOR 2.4;
+		}
+		LEVEL 0 FOR 3.87;
+		LEVEL 1 FOR 2.733;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.933;
+			LEVEL 1 FOR 2.733;
+		}
+		LEVEL 0 FOR 1.036;
+		LEVEL 1 FOR 0.153;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 12.38;
+		LEVEL 0 FOR 10.6;
+		LEVEL 1 FOR 2.472;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 1.6;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 6.099;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 3.58;
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 2.599;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.067;
+			LEVEL 1 FOR 2.599;
+		}
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 1.587;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.2;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.131;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 3.4;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 2.467;
+		LEVEL 0 FOR 0.252;
+		LEVEL 1 FOR 3.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.6;
+			LEVEL 1 FOR 3.4;
+		}
+		LEVEL 0 FOR 10.392;
+		LEVEL 1 FOR 3.8;
+		LEVEL 0 FOR 2.156;
+		LEVEL 1 FOR 8.582;
+		LEVEL 0 FOR 9.0;
+		LEVEL 1 FOR 2.418;
+		LEVEL 0 FOR 2.269;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.9;
+			LEVEL 1 FOR 2.1;
+		}
+		LEVEL 0 FOR 0.631;
+		LEVEL 1 FOR 1.156;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.9;
+			LEVEL 1 FOR 3.1;
+		}
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 1.944;
+		LEVEL 0 FOR 5.235;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.026;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.201;
+		LEVEL 1 FOR 4.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.6;
+			LEVEL 1 FOR 4.4;
+		}
+		LEVEL 0 FOR 6.514;
+		LEVEL 1 FOR 1.499;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.834;
+			LEVEL 1 FOR 1.499;
+		}
+		LEVEL 0 FOR 4.172;
+		LEVEL 1 FOR 7.8;
+		LEVEL 0 FOR 8.412;
+		LEVEL 1 FOR 1.466;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.867;
+			LEVEL 1 FOR 1.466;
+		}
+		LEVEL 0 FOR 3.456;
+		LEVEL 1 FOR 4.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.2;
+			LEVEL 1 FOR 4.8;
+		}
+		LEVEL 0 FOR 3.488;
+		LEVEL 1 FOR 3.763;
+		LEVEL 0 FOR 8.2;
+		LEVEL 1 FOR 14.091;
+		LEVEL 0 FOR 12.4;
+		LEVEL 1 FOR 1.546;
+		LEVEL 0 FOR 1.103;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 3.032;
+		LEVEL 1 FOR 0.814;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 4.675;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 1.011;
+	}
+}
+
+TRANSITION_LIST("D1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2.337;
+		LEVEL 1 FOR 3.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.8;
+			LEVEL 1 FOR 3.2;
+		}
+		LEVEL 0 FOR 4.463;
+		LEVEL 1 FOR 2.959;
+		LEVEL 0 FOR 9.4;
+		LEVEL 1 FOR 8.229;
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 3.199;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 2.613;
+		LEVEL 0 FOR 2.527;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 1.888;
+		LEVEL 1 FOR 2.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 2.0;
+		}
+		LEVEL 0 FOR 2.854;
+		LEVEL 1 FOR 0.395;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 7.548;
+		LEVEL 0 FOR 8.0;
+		LEVEL 1 FOR 10.458;
+		LEVEL 0 FOR 4.1;
+		LEVEL 1 FOR 2.7;
+		LEVEL 0 FOR 2.079;
+		LEVEL 1 FOR 3.266;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 1.323;
+		LEVEL 1 FOR 0.247;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.867;
+			LEVEL 1 FOR 3.799;
+		}
+		LEVEL 0 FOR 2.867;
+		LEVEL 1 FOR 7.783;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 4.4;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 0.866;
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 0.339;
+		LEVEL 0 FOR 10.748;
+		LEVEL 1 FOR 6.8;
+		LEVEL 0 FOR 2.452;
+		LEVEL 1 FOR 0.424;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.667;
+			LEVEL 1 FOR 3.999;
+		}
+		LEVEL 0 FOR 2.667;
+		LEVEL 1 FOR 4.954;
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 1.899;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1.434;
+			LEVEL 1 FOR 1.899;
+		}
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 0.523;
+		LEVEL 0 FOR 2.556;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 6.579;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 0.834;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.5;
+			LEVEL 1 FOR 3.5;
+		}
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 2.4;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 1.547;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 1.053;
+		LEVEL 0 FOR 3.83;
+		LEVEL 1 FOR 4.7;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.3;
+			LEVEL 1 FOR 4.7;
+		}
+		LEVEL 0 FOR 1.47;
+		LEVEL 1 FOR 7.392;
+		LEVEL 0 FOR 9.2;
+		LEVEL 1 FOR 3.408;
+		LEVEL 0 FOR 1.855;
+		LEVEL 1 FOR 2.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.8;
+			LEVEL 1 FOR 2.2;
+		}
+		LEVEL 0 FOR 1.822;
+		LEVEL 1 FOR 4.3;
+		LEVEL 0 FOR 4.823;
+		LEVEL 1 FOR 0.15;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.15;
+			LEVEL 1 FOR 1.85;
+		}
+		LEVEL 0 FOR 3.15;
+		LEVEL 1 FOR 1.7;
+		LEVEL 0 FOR 2.04;
+		LEVEL 1 FOR 1.166;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.167;
+			LEVEL 1 FOR 1.166;
+		}
+		LEVEL 0 FOR 0.128;
+		LEVEL 1 FOR 0.676;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 0.624;
+		LEVEL 0 FOR 0.422;
+		LEVEL 1 FOR 1.299;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 4.199;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 3.114;
+		LEVEL 1 FOR 2.801;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 3.849;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 5.331;
+		LEVEL 1 FOR 7.4;
+		LEVEL 0 FOR 12.304;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 4.966;
+		LEVEL 1 FOR 2.066;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.6;
+			LEVEL 1 FOR 2.066;
+		}
+		LEVEL 0 FOR 2.385;
+		LEVEL 1 FOR 3.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.2;
+			LEVEL 1 FOR 3.8;
+		}
+		LEVEL 0 FOR 4.716;
+		LEVEL 1 FOR 0.283;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.6;
+			LEVEL 1 FOR 1.733;
+		}
+		LEVEL 0 FOR 1.6;
+		LEVEL 1 FOR 1.451;
+		LEVEL 0 FOR 1.409;
+		LEVEL 1 FOR 3.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.067;
+			LEVEL 1 FOR 3.599;
+		}
+		LEVEL 0 FOR 3.289;
+		LEVEL 1 FOR 2.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.6;
+			LEVEL 1 FOR 2.4;
+		}
+		LEVEL 0 FOR 3.87;
+		LEVEL 1 FOR 2.733;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.933;
+			LEVEL 1 FOR 2.733;
+		}
+		LEVEL 0 FOR 1.036;
+		LEVEL 1 FOR 0.153;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 12.38;
+		LEVEL 0 FOR 10.6;
+		LEVEL 1 FOR 2.472;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 1.6;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 6.099;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 3.58;
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 2.599;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.067;
+			LEVEL 1 FOR 2.599;
+		}
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 1.587;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.2;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.131;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 3.4;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 2.467;
+		LEVEL 0 FOR 0.252;
+		LEVEL 1 FOR 3.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.6;
+			LEVEL 1 FOR 3.4;
+		}
+		LEVEL 0 FOR 10.392;
+		LEVEL 1 FOR 3.8;
+		LEVEL 0 FOR 2.156;
+		LEVEL 1 FOR 8.582;
+		LEVEL 0 FOR 9.0;
+		LEVEL 1 FOR 2.418;
+		LEVEL 0 FOR 2.269;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.9;
+			LEVEL 1 FOR 2.1;
+		}
+		LEVEL 0 FOR 0.631;
+		LEVEL 1 FOR 1.156;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.9;
+			LEVEL 1 FOR 3.1;
+		}
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 1.944;
+		LEVEL 0 FOR 5.235;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.026;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.201;
+		LEVEL 1 FOR 4.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.6;
+			LEVEL 1 FOR 4.4;
+		}
+		LEVEL 0 FOR 6.514;
+		LEVEL 1 FOR 1.499;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.834;
+			LEVEL 1 FOR 1.499;
+		}
+		LEVEL 0 FOR 4.172;
+		LEVEL 1 FOR 7.8;
+		LEVEL 0 FOR 8.412;
+		LEVEL 1 FOR 1.466;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.867;
+			LEVEL 1 FOR 1.466;
+		}
+		LEVEL 0 FOR 3.456;
+		LEVEL 1 FOR 4.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.2;
+			LEVEL 1 FOR 4.8;
+		}
+		LEVEL 0 FOR 3.488;
+		LEVEL 1 FOR 3.763;
+		LEVEL 0 FOR 8.2;
+		LEVEL 1 FOR 14.091;
+		LEVEL 0 FOR 12.4;
+		LEVEL 1 FOR 1.546;
+		LEVEL 0 FOR 1.103;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 3.032;
+		LEVEL 1 FOR 0.814;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 4.675;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 1.011;
+	}
+}
+
+TRANSITION_LIST("D2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2.337;
+		LEVEL 1 FOR 3.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.8;
+			LEVEL 1 FOR 3.2;
+		}
+		LEVEL 0 FOR 4.463;
+		LEVEL 1 FOR 2.959;
+		LEVEL 0 FOR 9.4;
+		LEVEL 1 FOR 8.229;
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 3.199;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 2.613;
+		LEVEL 0 FOR 2.527;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 1.888;
+		LEVEL 1 FOR 2.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 2.0;
+		}
+		LEVEL 0 FOR 2.854;
+		LEVEL 1 FOR 0.395;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 7.548;
+		LEVEL 0 FOR 8.0;
+		LEVEL 1 FOR 10.458;
+		LEVEL 0 FOR 4.1;
+		LEVEL 1 FOR 2.7;
+		LEVEL 0 FOR 2.079;
+		LEVEL 1 FOR 3.266;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 1.323;
+		LEVEL 1 FOR 0.247;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.867;
+			LEVEL 1 FOR 3.799;
+		}
+		LEVEL 0 FOR 2.867;
+		LEVEL 1 FOR 7.783;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 4.4;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 0.866;
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 0.339;
+		LEVEL 0 FOR 10.748;
+		LEVEL 1 FOR 6.8;
+		LEVEL 0 FOR 2.452;
+		LEVEL 1 FOR 0.424;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.667;
+			LEVEL 1 FOR 3.999;
+		}
+		LEVEL 0 FOR 2.667;
+		LEVEL 1 FOR 4.954;
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 1.899;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1.434;
+			LEVEL 1 FOR 1.899;
+		}
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 0.523;
+		LEVEL 0 FOR 2.556;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 6.579;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 0.834;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.5;
+			LEVEL 1 FOR 3.5;
+		}
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 2.4;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 1.547;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 1.053;
+		LEVEL 0 FOR 3.83;
+		LEVEL 1 FOR 4.7;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.3;
+			LEVEL 1 FOR 4.7;
+		}
+		LEVEL 0 FOR 1.47;
+		LEVEL 1 FOR 7.392;
+		LEVEL 0 FOR 9.2;
+		LEVEL 1 FOR 3.408;
+		LEVEL 0 FOR 1.855;
+		LEVEL 1 FOR 2.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.8;
+			LEVEL 1 FOR 2.2;
+		}
+		LEVEL 0 FOR 1.822;
+		LEVEL 1 FOR 4.3;
+		LEVEL 0 FOR 4.823;
+		LEVEL 1 FOR 0.15;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.15;
+			LEVEL 1 FOR 1.85;
+		}
+		LEVEL 0 FOR 3.15;
+		LEVEL 1 FOR 1.7;
+		LEVEL 0 FOR 2.04;
+		LEVEL 1 FOR 1.166;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.167;
+			LEVEL 1 FOR 1.166;
+		}
+		LEVEL 0 FOR 0.128;
+		LEVEL 1 FOR 0.676;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 0.624;
+		LEVEL 0 FOR 0.422;
+		LEVEL 1 FOR 1.299;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 4.199;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 3.114;
+		LEVEL 1 FOR 2.801;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 3.849;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 5.331;
+		LEVEL 1 FOR 7.4;
+		LEVEL 0 FOR 12.304;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 4.966;
+		LEVEL 1 FOR 2.066;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.6;
+			LEVEL 1 FOR 2.066;
+		}
+		LEVEL 0 FOR 2.385;
+		LEVEL 1 FOR 3.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.2;
+			LEVEL 1 FOR 3.8;
+		}
+		LEVEL 0 FOR 4.716;
+		LEVEL 1 FOR 0.283;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.6;
+			LEVEL 1 FOR 1.733;
+		}
+		LEVEL 0 FOR 1.6;
+		LEVEL 1 FOR 1.451;
+		LEVEL 0 FOR 1.409;
+		LEVEL 1 FOR 3.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.067;
+			LEVEL 1 FOR 3.599;
+		}
+		LEVEL 0 FOR 3.289;
+		LEVEL 1 FOR 2.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.6;
+			LEVEL 1 FOR 2.4;
+		}
+		LEVEL 0 FOR 3.87;
+		LEVEL 1 FOR 2.733;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.933;
+			LEVEL 1 FOR 2.733;
+		}
+		LEVEL 0 FOR 1.036;
+		LEVEL 1 FOR 0.153;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 12.38;
+		LEVEL 0 FOR 10.6;
+		LEVEL 1 FOR 2.472;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 1.6;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 6.099;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 3.58;
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 2.599;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.067;
+			LEVEL 1 FOR 2.599;
+		}
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 1.587;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.2;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.131;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 3.4;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 2.467;
+		LEVEL 0 FOR 0.252;
+		LEVEL 1 FOR 3.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.6;
+			LEVEL 1 FOR 3.4;
+		}
+		LEVEL 0 FOR 10.392;
+		LEVEL 1 FOR 3.8;
+		LEVEL 0 FOR 2.156;
+		LEVEL 1 FOR 8.582;
+		LEVEL 0 FOR 9.0;
+		LEVEL 1 FOR 2.418;
+		LEVEL 0 FOR 2.269;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.9;
+			LEVEL 1 FOR 2.1;
+		}
+		LEVEL 0 FOR 0.631;
+		LEVEL 1 FOR 1.156;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.9;
+			LEVEL 1 FOR 3.1;
+		}
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 1.944;
+		LEVEL 0 FOR 5.235;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.026;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.201;
+		LEVEL 1 FOR 4.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.6;
+			LEVEL 1 FOR 4.4;
+		}
+		LEVEL 0 FOR 6.514;
+		LEVEL 1 FOR 1.499;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.834;
+			LEVEL 1 FOR 1.499;
+		}
+		LEVEL 0 FOR 4.172;
+		LEVEL 1 FOR 7.8;
+		LEVEL 0 FOR 8.412;
+		LEVEL 1 FOR 1.466;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.867;
+			LEVEL 1 FOR 1.466;
+		}
+		LEVEL 0 FOR 3.456;
+		LEVEL 1 FOR 4.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.2;
+			LEVEL 1 FOR 4.8;
+		}
+		LEVEL 0 FOR 3.488;
+		LEVEL 1 FOR 3.763;
+		LEVEL 0 FOR 8.2;
+		LEVEL 1 FOR 14.091;
+		LEVEL 0 FOR 12.4;
+		LEVEL 1 FOR 1.546;
+		LEVEL 0 FOR 1.103;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 3.032;
+		LEVEL 1 FOR 0.814;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 4.675;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 1.011;
+	}
+}
+
+TRANSITION_LIST("D3")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2.337;
+		LEVEL 1 FOR 3.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.8;
+			LEVEL 1 FOR 3.2;
+		}
+		LEVEL 0 FOR 4.463;
+		LEVEL 1 FOR 2.959;
+		LEVEL 0 FOR 9.4;
+		LEVEL 1 FOR 8.229;
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 3.199;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 2.613;
+		LEVEL 0 FOR 2.527;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 1.888;
+		LEVEL 1 FOR 2.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 2.0;
+		}
+		LEVEL 0 FOR 2.854;
+		LEVEL 1 FOR 0.395;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 7.548;
+		LEVEL 0 FOR 8.0;
+		LEVEL 1 FOR 10.458;
+		LEVEL 0 FOR 4.1;
+		LEVEL 1 FOR 2.7;
+		LEVEL 0 FOR 2.079;
+		LEVEL 1 FOR 3.266;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 1.323;
+		LEVEL 1 FOR 0.247;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.867;
+			LEVEL 1 FOR 3.799;
+		}
+		LEVEL 0 FOR 2.867;
+		LEVEL 1 FOR 7.783;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 4.4;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 0.866;
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 0.339;
+		LEVEL 0 FOR 10.748;
+		LEVEL 1 FOR 6.8;
+		LEVEL 0 FOR 2.452;
+		LEVEL 1 FOR 0.424;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.667;
+			LEVEL 1 FOR 3.999;
+		}
+		LEVEL 0 FOR 2.667;
+		LEVEL 1 FOR 4.954;
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 1.899;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1.434;
+			LEVEL 1 FOR 1.899;
+		}
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 0.523;
+		LEVEL 0 FOR 2.556;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 6.579;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 0.834;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.5;
+			LEVEL 1 FOR 3.5;
+		}
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 2.4;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 1.547;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 1.053;
+		LEVEL 0 FOR 3.83;
+		LEVEL 1 FOR 4.7;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.3;
+			LEVEL 1 FOR 4.7;
+		}
+		LEVEL 0 FOR 1.47;
+		LEVEL 1 FOR 7.392;
+		LEVEL 0 FOR 9.2;
+		LEVEL 1 FOR 3.408;
+		LEVEL 0 FOR 1.855;
+		LEVEL 1 FOR 2.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.8;
+			LEVEL 1 FOR 2.2;
+		}
+		LEVEL 0 FOR 1.822;
+		LEVEL 1 FOR 4.3;
+		LEVEL 0 FOR 4.823;
+		LEVEL 1 FOR 0.15;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.15;
+			LEVEL 1 FOR 1.85;
+		}
+		LEVEL 0 FOR 3.15;
+		LEVEL 1 FOR 1.7;
+		LEVEL 0 FOR 2.04;
+		LEVEL 1 FOR 1.166;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.167;
+			LEVEL 1 FOR 1.166;
+		}
+		LEVEL 0 FOR 0.128;
+		LEVEL 1 FOR 0.676;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 0.624;
+		LEVEL 0 FOR 0.422;
+		LEVEL 1 FOR 1.299;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 4.199;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 3.114;
+		LEVEL 1 FOR 2.801;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 3.849;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 5.331;
+		LEVEL 1 FOR 7.4;
+		LEVEL 0 FOR 12.304;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 4.966;
+		LEVEL 1 FOR 2.066;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.6;
+			LEVEL 1 FOR 2.066;
+		}
+		LEVEL 0 FOR 2.385;
+		LEVEL 1 FOR 3.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.2;
+			LEVEL 1 FOR 3.8;
+		}
+		LEVEL 0 FOR 4.716;
+		LEVEL 1 FOR 0.283;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.6;
+			LEVEL 1 FOR 1.733;
+		}
+		LEVEL 0 FOR 1.6;
+		LEVEL 1 FOR 1.451;
+		LEVEL 0 FOR 1.409;
+		LEVEL 1 FOR 3.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.067;
+			LEVEL 1 FOR 3.599;
+		}
+		LEVEL 0 FOR 3.289;
+		LEVEL 1 FOR 2.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.6;
+			LEVEL 1 FOR 2.4;
+		}
+		LEVEL 0 FOR 3.87;
+		LEVEL 1 FOR 2.733;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.933;
+			LEVEL 1 FOR 2.733;
+		}
+		LEVEL 0 FOR 1.036;
+		LEVEL 1 FOR 0.153;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 12.38;
+		LEVEL 0 FOR 10.6;
+		LEVEL 1 FOR 2.472;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 1.6;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 6.099;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 3.58;
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 2.599;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.067;
+			LEVEL 1 FOR 2.599;
+		}
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 1.587;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.2;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.131;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 3.4;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 2.467;
+		LEVEL 0 FOR 0.252;
+		LEVEL 1 FOR 3.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.6;
+			LEVEL 1 FOR 3.4;
+		}
+		LEVEL 0 FOR 10.392;
+		LEVEL 1 FOR 3.8;
+		LEVEL 0 FOR 2.156;
+		LEVEL 1 FOR 8.582;
+		LEVEL 0 FOR 9.0;
+		LEVEL 1 FOR 2.418;
+		LEVEL 0 FOR 2.269;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.9;
+			LEVEL 1 FOR 2.1;
+		}
+		LEVEL 0 FOR 0.631;
+		LEVEL 1 FOR 1.156;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.9;
+			LEVEL 1 FOR 3.1;
+		}
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 1.944;
+		LEVEL 0 FOR 5.235;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.026;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.201;
+		LEVEL 1 FOR 4.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.6;
+			LEVEL 1 FOR 4.4;
+		}
+		LEVEL 0 FOR 6.514;
+		LEVEL 1 FOR 1.499;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.834;
+			LEVEL 1 FOR 1.499;
+		}
+		LEVEL 0 FOR 4.172;
+		LEVEL 1 FOR 7.8;
+		LEVEL 0 FOR 8.412;
+		LEVEL 1 FOR 1.466;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.867;
+			LEVEL 1 FOR 1.466;
+		}
+		LEVEL 0 FOR 3.456;
+		LEVEL 1 FOR 4.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.2;
+			LEVEL 1 FOR 4.8;
+		}
+		LEVEL 0 FOR 3.488;
+		LEVEL 1 FOR 3.763;
+		LEVEL 0 FOR 8.2;
+		LEVEL 1 FOR 14.091;
+		LEVEL 0 FOR 12.4;
+		LEVEL 1 FOR 1.546;
+		LEVEL 0 FOR 1.103;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 3.032;
+		LEVEL 1 FOR 0.814;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 4.675;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 1.011;
+	}
+}
+
+TRANSITION_LIST("D4")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2.337;
+		LEVEL 1 FOR 3.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.8;
+			LEVEL 1 FOR 3.2;
+		}
+		LEVEL 0 FOR 4.463;
+		LEVEL 1 FOR 2.959;
+		LEVEL 0 FOR 9.4;
+		LEVEL 1 FOR 8.229;
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 3.199;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 2.613;
+		LEVEL 0 FOR 2.527;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 1.888;
+		LEVEL 1 FOR 2.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 2.0;
+		}
+		LEVEL 0 FOR 2.854;
+		LEVEL 1 FOR 0.395;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 7.548;
+		LEVEL 0 FOR 8.0;
+		LEVEL 1 FOR 10.458;
+		LEVEL 0 FOR 4.1;
+		LEVEL 1 FOR 2.7;
+		LEVEL 0 FOR 2.079;
+		LEVEL 1 FOR 3.266;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 1.323;
+		LEVEL 1 FOR 0.247;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.867;
+			LEVEL 1 FOR 3.799;
+		}
+		LEVEL 0 FOR 2.867;
+		LEVEL 1 FOR 7.783;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 4.4;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 0.866;
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 0.339;
+		LEVEL 0 FOR 10.748;
+		LEVEL 1 FOR 6.8;
+		LEVEL 0 FOR 2.452;
+		LEVEL 1 FOR 0.424;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.667;
+			LEVEL 1 FOR 3.999;
+		}
+		LEVEL 0 FOR 2.667;
+		LEVEL 1 FOR 4.954;
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 1.899;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1.434;
+			LEVEL 1 FOR 1.899;
+		}
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 0.523;
+		LEVEL 0 FOR 2.556;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 6.579;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 0.834;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.5;
+			LEVEL 1 FOR 3.5;
+		}
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 2.4;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 1.547;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 1.053;
+		LEVEL 0 FOR 3.83;
+		LEVEL 1 FOR 4.7;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.3;
+			LEVEL 1 FOR 4.7;
+		}
+		LEVEL 0 FOR 1.47;
+		LEVEL 1 FOR 7.392;
+		LEVEL 0 FOR 9.2;
+		LEVEL 1 FOR 3.408;
+		LEVEL 0 FOR 1.855;
+		LEVEL 1 FOR 2.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.8;
+			LEVEL 1 FOR 2.2;
+		}
+		LEVEL 0 FOR 1.822;
+		LEVEL 1 FOR 4.3;
+		LEVEL 0 FOR 4.823;
+		LEVEL 1 FOR 0.15;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.15;
+			LEVEL 1 FOR 1.85;
+		}
+		LEVEL 0 FOR 3.15;
+		LEVEL 1 FOR 1.7;
+		LEVEL 0 FOR 2.04;
+		LEVEL 1 FOR 1.166;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.167;
+			LEVEL 1 FOR 1.166;
+		}
+		LEVEL 0 FOR 0.128;
+		LEVEL 1 FOR 0.676;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 0.624;
+		LEVEL 0 FOR 0.422;
+		LEVEL 1 FOR 1.299;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 4.199;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 3.114;
+		LEVEL 1 FOR 2.801;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 3.849;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 5.331;
+		LEVEL 1 FOR 7.4;
+		LEVEL 0 FOR 12.304;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 4.966;
+		LEVEL 1 FOR 2.066;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.6;
+			LEVEL 1 FOR 2.066;
+		}
+		LEVEL 0 FOR 2.385;
+		LEVEL 1 FOR 3.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.2;
+			LEVEL 1 FOR 3.8;
+		}
+		LEVEL 0 FOR 4.716;
+		LEVEL 1 FOR 0.283;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.6;
+			LEVEL 1 FOR 1.733;
+		}
+		LEVEL 0 FOR 1.6;
+		LEVEL 1 FOR 1.451;
+		LEVEL 0 FOR 1.409;
+		LEVEL 1 FOR 3.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.067;
+			LEVEL 1 FOR 3.599;
+		}
+		LEVEL 0 FOR 3.289;
+		LEVEL 1 FOR 2.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.6;
+			LEVEL 1 FOR 2.4;
+		}
+		LEVEL 0 FOR 3.87;
+		LEVEL 1 FOR 2.733;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.933;
+			LEVEL 1 FOR 2.733;
+		}
+		LEVEL 0 FOR 1.036;
+		LEVEL 1 FOR 0.153;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 12.38;
+		LEVEL 0 FOR 10.6;
+		LEVEL 1 FOR 2.472;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 1.6;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 6.099;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 3.58;
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 2.599;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.067;
+			LEVEL 1 FOR 2.599;
+		}
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 1.587;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.2;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.131;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 3.4;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 2.467;
+		LEVEL 0 FOR 0.252;
+		LEVEL 1 FOR 3.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.6;
+			LEVEL 1 FOR 3.4;
+		}
+		LEVEL 0 FOR 10.392;
+		LEVEL 1 FOR 3.8;
+		LEVEL 0 FOR 2.156;
+		LEVEL 1 FOR 8.582;
+		LEVEL 0 FOR 9.0;
+		LEVEL 1 FOR 2.418;
+		LEVEL 0 FOR 2.269;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.9;
+			LEVEL 1 FOR 2.1;
+		}
+		LEVEL 0 FOR 0.631;
+		LEVEL 1 FOR 1.156;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.9;
+			LEVEL 1 FOR 3.1;
+		}
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 1.944;
+		LEVEL 0 FOR 5.235;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.026;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.201;
+		LEVEL 1 FOR 4.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.6;
+			LEVEL 1 FOR 4.4;
+		}
+		LEVEL 0 FOR 6.514;
+		LEVEL 1 FOR 1.499;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.834;
+			LEVEL 1 FOR 1.499;
+		}
+		LEVEL 0 FOR 4.172;
+		LEVEL 1 FOR 7.8;
+		LEVEL 0 FOR 8.412;
+		LEVEL 1 FOR 1.466;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.867;
+			LEVEL 1 FOR 1.466;
+		}
+		LEVEL 0 FOR 3.456;
+		LEVEL 1 FOR 4.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.2;
+			LEVEL 1 FOR 4.8;
+		}
+		LEVEL 0 FOR 3.488;
+		LEVEL 1 FOR 3.763;
+		LEVEL 0 FOR 8.2;
+		LEVEL 1 FOR 14.091;
+		LEVEL 0 FOR 12.4;
+		LEVEL 1 FOR 1.546;
+		LEVEL 0 FOR 1.103;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 3.032;
+		LEVEL 1 FOR 0.814;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 4.675;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 1.011;
+	}
+}
+
+TRANSITION_LIST("D5")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2.337;
+		LEVEL 1 FOR 3.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.8;
+			LEVEL 1 FOR 3.2;
+		}
+		LEVEL 0 FOR 4.463;
+		LEVEL 1 FOR 2.959;
+		LEVEL 0 FOR 9.4;
+		LEVEL 1 FOR 8.229;
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 3.199;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 2.613;
+		LEVEL 0 FOR 2.527;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 1.888;
+		LEVEL 1 FOR 2.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 2.0;
+		}
+		LEVEL 0 FOR 2.854;
+		LEVEL 1 FOR 0.395;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.467;
+			LEVEL 1 FOR 3.199;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 7.548;
+		LEVEL 0 FOR 8.0;
+		LEVEL 1 FOR 10.458;
+		LEVEL 0 FOR 4.1;
+		LEVEL 1 FOR 2.7;
+		LEVEL 0 FOR 2.079;
+		LEVEL 1 FOR 3.266;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 1.323;
+		LEVEL 1 FOR 0.247;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.867;
+			LEVEL 1 FOR 3.799;
+		}
+		LEVEL 0 FOR 2.867;
+		LEVEL 1 FOR 7.783;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 4.4;
+		LEVEL 0 FOR 5.6;
+		LEVEL 1 FOR 0.866;
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.3;
+		LEVEL 1 FOR 0.339;
+		LEVEL 0 FOR 10.748;
+		LEVEL 1 FOR 6.8;
+		LEVEL 0 FOR 2.452;
+		LEVEL 1 FOR 0.424;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.667;
+			LEVEL 1 FOR 3.999;
+		}
+		LEVEL 0 FOR 2.667;
+		LEVEL 1 FOR 4.954;
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 1.899;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1.434;
+			LEVEL 1 FOR 1.899;
+		}
+		LEVEL 0 FOR 1.434;
+		LEVEL 1 FOR 0.523;
+		LEVEL 0 FOR 2.556;
+		LEVEL 1 FOR 2.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.267;
+			LEVEL 1 FOR 2.399;
+		}
+		LEVEL 0 FOR 6.579;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 0.834;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.5;
+			LEVEL 1 FOR 3.5;
+		}
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 2.4;
+		LEVEL 0 FOR 2.6;
+		LEVEL 1 FOR 1.547;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 2.5;
+		LEVEL 0 FOR 2.5;
+		LEVEL 1 FOR 1.053;
+		LEVEL 0 FOR 3.83;
+		LEVEL 1 FOR 4.7;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.3;
+			LEVEL 1 FOR 4.7;
+		}
+		LEVEL 0 FOR 1.47;
+		LEVEL 1 FOR 7.392;
+		LEVEL 0 FOR 9.2;
+		LEVEL 1 FOR 3.408;
+		LEVEL 0 FOR 1.855;
+		LEVEL 1 FOR 2.2;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.8;
+			LEVEL 1 FOR 2.2;
+		}
+		LEVEL 0 FOR 1.822;
+		LEVEL 1 FOR 4.3;
+		LEVEL 0 FOR 4.823;
+		LEVEL 1 FOR 0.15;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.15;
+			LEVEL 1 FOR 1.85;
+		}
+		LEVEL 0 FOR 3.15;
+		LEVEL 1 FOR 1.7;
+		LEVEL 0 FOR 2.04;
+		LEVEL 1 FOR 1.166;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.167;
+			LEVEL 1 FOR 1.166;
+		}
+		LEVEL 0 FOR 0.128;
+		LEVEL 1 FOR 0.676;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 0.624;
+		LEVEL 0 FOR 0.422;
+		LEVEL 1 FOR 1.299;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 4.199;
+		LEVEL 1 FOR 4.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.7;
+			LEVEL 1 FOR 4.3;
+		}
+		LEVEL 0 FOR 3.114;
+		LEVEL 1 FOR 2.801;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 3.849;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 5.331;
+		LEVEL 1 FOR 7.4;
+		LEVEL 0 FOR 12.304;
+		LEVEL 1 FOR 3.7;
+		LEVEL 0 FOR 4.966;
+		LEVEL 1 FOR 2.066;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.6;
+			LEVEL 1 FOR 2.066;
+		}
+		LEVEL 0 FOR 2.385;
+		LEVEL 1 FOR 3.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.2;
+			LEVEL 1 FOR 3.8;
+		}
+		LEVEL 0 FOR 4.716;
+		LEVEL 1 FOR 0.283;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.6;
+			LEVEL 1 FOR 1.733;
+		}
+		LEVEL 0 FOR 1.6;
+		LEVEL 1 FOR 1.451;
+		LEVEL 0 FOR 1.409;
+		LEVEL 1 FOR 3.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.067;
+			LEVEL 1 FOR 3.599;
+		}
+		LEVEL 0 FOR 3.289;
+		LEVEL 1 FOR 2.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.6;
+			LEVEL 1 FOR 2.4;
+		}
+		LEVEL 0 FOR 3.87;
+		LEVEL 1 FOR 2.733;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.933;
+			LEVEL 1 FOR 2.733;
+		}
+		LEVEL 0 FOR 1.036;
+		LEVEL 1 FOR 0.153;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 12.38;
+		LEVEL 0 FOR 10.6;
+		LEVEL 1 FOR 2.472;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 6.5;
+		LEVEL 1 FOR 1.6;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 6.099;
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 3.58;
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 2.599;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.067;
+			LEVEL 1 FOR 2.599;
+		}
+		LEVEL 0 FOR 4.067;
+		LEVEL 1 FOR 1.587;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.2;
+		LEVEL 0 FOR 2.8;
+		LEVEL 1 FOR 2.131;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 3.4;
+		LEVEL 0 FOR 6.6;
+		LEVEL 1 FOR 2.467;
+		LEVEL 0 FOR 0.252;
+		LEVEL 1 FOR 3.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.6;
+			LEVEL 1 FOR 3.4;
+		}
+		LEVEL 0 FOR 10.392;
+		LEVEL 1 FOR 3.8;
+		LEVEL 0 FOR 2.156;
+		LEVEL 1 FOR 8.582;
+		LEVEL 0 FOR 9.0;
+		LEVEL 1 FOR 2.418;
+		LEVEL 0 FOR 2.269;
+		LEVEL 1 FOR 2.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.9;
+			LEVEL 1 FOR 2.1;
+		}
+		LEVEL 0 FOR 0.631;
+		LEVEL 1 FOR 1.156;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.9;
+			LEVEL 1 FOR 3.1;
+		}
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 1.944;
+		LEVEL 0 FOR 5.235;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 2.026;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 2.201;
+		LEVEL 1 FOR 4.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.6;
+			LEVEL 1 FOR 4.4;
+		}
+		LEVEL 0 FOR 6.514;
+		LEVEL 1 FOR 1.499;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.834;
+			LEVEL 1 FOR 1.499;
+		}
+		LEVEL 0 FOR 4.172;
+		LEVEL 1 FOR 7.8;
+		LEVEL 0 FOR 8.412;
+		LEVEL 1 FOR 1.466;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.867;
+			LEVEL 1 FOR 1.466;
+		}
+		LEVEL 0 FOR 3.456;
+		LEVEL 1 FOR 4.8;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.2;
+			LEVEL 1 FOR 4.8;
+		}
+		LEVEL 0 FOR 3.488;
+		LEVEL 1 FOR 3.763;
+		LEVEL 0 FOR 8.2;
+		LEVEL 1 FOR 14.091;
+		LEVEL 0 FOR 12.4;
+		LEVEL 1 FOR 1.546;
+		LEVEL 0 FOR 1.103;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 3.032;
+		LEVEL 1 FOR 0.814;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.034;
+			LEVEL 1 FOR 1.299;
+		}
+		LEVEL 0 FOR 2.034;
+		LEVEL 1 FOR 4.675;
+		LEVEL 0 FOR 4.8;
+		LEVEL 1 FOR 1.011;
+	}
+}
+
+TRANSITION_LIST("D6")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 0.903;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.667;
+			LEVEL 1 FOR 2.999;
+		}
+		LEVEL 0 FOR 3.667;
+		LEVEL 1 FOR 2.349;
+		LEVEL 0 FOR 2.134;
+		LEVEL 1 FOR 1.199;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.134;
+			LEVEL 1 FOR 1.199;
+		}
+		LEVEL 0 FOR 2.134;
+		LEVEL 1 FOR 0.949;
+		LEVEL 0 FOR 7.455;
+		LEVEL 1 FOR 6.4;
+		LEVEL 0 FOR 8.685;
+		LEVEL 1 FOR 1.65;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.35;
+			LEVEL 1 FOR 1.65;
+		}
+		LEVEL 0 FOR 4.548;
+		LEVEL 1 FOR 3.3;
+		LEVEL 0 FOR 4.626;
+		LEVEL 1 FOR 2.05;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.95;
+			LEVEL 1 FOR 2.05;
+		}
+		LEVEL 0 FOR 5.528;
+		LEVEL 1 FOR 3.6;
+		LEVEL 0 FOR 2.158;
+		LEVEL 1 FOR 1.681;
+		LEVEL 0 FOR 12.2;
+		LEVEL 1 FOR 6.119;
+		LEVEL 0 FOR 1.064;
+		LEVEL 1 FOR 9.8;
+		LEVEL 0 FOR 9.136;
+		LEVEL 1 FOR 2.538;
+		LEVEL 0 FOR 13.0;
+		LEVEL 1 FOR 4.462;
+		LEVEL 0 FOR 4.408;
+		LEVEL 1 FOR 8.6;
+		LEVEL 0 FOR 6.992;
+		LEVEL 1 FOR 2.013;
+		LEVEL 0 FOR 6.4;
+		LEVEL 1 FOR 1.587;
+		LEVEL 0 FOR 11.82;
+		LEVEL 1 FOR 6.4;
+		LEVEL 0 FOR 1.78;
+		LEVEL 1 FOR 0.767;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.334;
+			LEVEL 1 FOR 0.999;
+		}
+		LEVEL 0 FOR 2.334;
+		LEVEL 1 FOR 0.233;
+		LEVEL 0 FOR 1.06;
+		LEVEL 1 FOR 1.933;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.4;
+			LEVEL 1 FOR 1.933;
+		}
+		LEVEL 0 FOR 4.879;
+		LEVEL 1 FOR 3.3;
+		LEVEL 0 FOR 5.513;
+		LEVEL 1 FOR 2.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.067;
+			LEVEL 1 FOR 2.599;
+		}
+		LEVEL 0 FOR 0.718;
+		LEVEL 1 FOR 0.883;
+		LEVEL 0 FOR 11.8;
+		LEVEL 1 FOR 8.868;
+		LEVEL 0 FOR 5.2;
+		LEVEL 1 FOR 3.77;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 2.757;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 1.772;
+		LEVEL 0 FOR 5.29;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 1.21;
+		LEVEL 1 FOR 2.475;
+		LEVEL 0 FOR 10.4;
+		LEVEL 1 FOR 8.28;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 0.895;
+		LEVEL 0 FOR 0.162;
+		LEVEL 1 FOR 5.8;
+		LEVEL 0 FOR 4.16;
+		LEVEL 1 FOR 1.9;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 2.978;
+		LEVEL 1 FOR 0.63;
+		LEVEL 0 FOR 9.4;
+		LEVEL 1 FOR 9.97;
+		LEVEL 0 FOR 2.974;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 1.161;
+		LEVEL 1 FOR 0.612;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.134;
+			LEVEL 1 FOR 1.199;
+		}
+		LEVEL 0 FOR 2.134;
+		LEVEL 1 FOR 0.588;
+		LEVEL 0 FOR 1.593;
+		LEVEL 1 FOR 2.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 2.0;
+		}
+		LEVEL 0 FOR 1.407;
+		LEVEL 1 FOR 3.005;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.1;
+			LEVEL 1 FOR 3.9;
+		}
+		LEVEL 0 FOR 6.1;
+		LEVEL 1 FOR 0.895;
+		LEVEL 0 FOR 2.784;
+		LEVEL 1 FOR 3.4;
+		LEVEL 0 FOR 4.248;
+		LEVEL 1 FOR 3.666;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 3.666;
+		}
+		LEVEL 0 FOR 2.57;
+		LEVEL 1 FOR 2.473;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 0.795;
+		LEVEL 0 FOR 2.356;
+		LEVEL 1 FOR 2.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.6;
+			LEVEL 1 FOR 2.4;
+		}
+		LEVEL 0 FOR 1.185;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 1.738;
+		LEVEL 1 FOR 4.5;
+		LEVEL 0 FOR 5.122;
+		LEVEL 1 FOR 0.738;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.234;
+			LEVEL 1 FOR 1.099;
+		}
+		LEVEL 0 FOR 2.234;
+		LEVEL 1 FOR 0.362;
+		LEVEL 0 FOR 3.121;
+		LEVEL 1 FOR 8.8;
+		LEVEL 0 FOR 9.704;
+		LEVEL 1 FOR 2.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.7;
+			LEVEL 1 FOR 2.3;
+		}
+		LEVEL 0 FOR 1.075;
+		LEVEL 1 FOR 0.279;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.2;
+			LEVEL 1 FOR 3.8;
+		}
+		LEVEL 0 FOR 6.2;
+		LEVEL 1 FOR 3.521;
+		LEVEL 0 FOR 2.885;
+		LEVEL 1 FOR 1.75;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.25;
+			LEVEL 1 FOR 1.75;
+		}
+		LEVEL 0 FOR 0.365;
+		LEVEL 1 FOR 0.201;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 1.6;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 1.399;
+		LEVEL 0 FOR 5.585;
+		LEVEL 1 FOR 4.1;
+		LEVEL 0 FOR 0.315;
+		LEVEL 1 FOR 0.349;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.7;
+			LEVEL 1 FOR 1.633;
+		}
+		LEVEL 0 FOR 1.7;
+		LEVEL 1 FOR 1.285;
+		LEVEL 0 FOR 0.69;
+		LEVEL 1 FOR 6.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.0;
+			LEVEL 1 FOR 6.0;
+		}
+		LEVEL 0 FOR 3.31;
+		LEVEL 1 FOR 1.602;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.2;
+			LEVEL 1 FOR 2.466;
+		}
+		LEVEL 0 FOR 4.2;
+		LEVEL 1 FOR 5.46;
+		LEVEL 0 FOR 5.1;
+		LEVEL 1 FOR 4.9;
+		LEVEL 0 FOR 5.1;
+		LEVEL 1 FOR 0.306;
+		LEVEL 0 FOR 4.714;
+		LEVEL 1 FOR 6.4;
+		LEVEL 0 FOR 8.886;
+		LEVEL 1 FOR 0.124;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 3.1;
+		LEVEL 1 FOR 1.776;
+		LEVEL 0 FOR 3.309;
+		LEVEL 1 FOR 6.6;
+		LEVEL 0 FOR 10.271;
+		LEVEL 1 FOR 1.366;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.967;
+			LEVEL 1 FOR 1.366;
+		}
+		LEVEL 0 FOR 9.017;
+		LEVEL 1 FOR 8.4;
+		LEVEL 0 FOR 6.019;
+		LEVEL 1 FOR 3.799;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.867;
+			LEVEL 1 FOR 3.799;
+		}
+		LEVEL 0 FOR 3.804;
+		LEVEL 1 FOR 1.9;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 0.972;
+		LEVEL 1 FOR 4.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.6;
+			LEVEL 1 FOR 4.4;
+		}
+		LEVEL 0 FOR 6.104;
+		LEVEL 1 FOR 1.799;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.534;
+			LEVEL 1 FOR 1.799;
+		}
+		LEVEL 0 FOR 0.576;
+		LEVEL 1 FOR 0.903;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 3.1;
+		LEVEL 1 FOR 0.997;
+		LEVEL 0 FOR 0.22;
+		LEVEL 1 FOR 3.9;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.1;
+			LEVEL 1 FOR 3.9;
+		}
+		LEVEL 0 FOR 5.88;
+		LEVEL 1 FOR 0.745;
+		LEVEL 0 FOR 6.2;
+		LEVEL 1 FOR 4.655;
+		LEVEL 0 FOR 3.6;
+		LEVEL 1 FOR 3.066;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.6;
+			LEVEL 1 FOR 3.066;
+		}
+		LEVEL 0 FOR 3.6;
+		LEVEL 1 FOR 2.814;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 3.1;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 1.754;
+		LEVEL 0 FOR 0.545;
+		LEVEL 1 FOR 1.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.934;
+			LEVEL 1 FOR 1.399;
+		}
+		LEVEL 0 FOR 1.39;
+		LEVEL 1 FOR 0.591;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.167;
+			LEVEL 1 FOR 1.166;
+		}
+		LEVEL 0 FOR 2.167;
+		LEVEL 1 FOR 2.509;
+		LEVEL 0 FOR 2.65;
+		LEVEL 1 FOR 2.35;
+		LEVEL 0 FOR 2.65;
+		LEVEL 1 FOR 0.417;
+		LEVEL 0 FOR 3.921;
+		LEVEL 1 FOR 3.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.9;
+			LEVEL 1 FOR 3.1;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 2.65;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.35;
+			LEVEL 1 FOR 2.65;
+		}
+		LEVEL 0 FOR 2.015;
+		LEVEL 1 FOR 5.7;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.3;
+			LEVEL 1 FOR 5.7;
+		}
+		LEVEL 0 FOR 6.583;
+		LEVEL 1 FOR 2.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.7;
+			LEVEL 1 FOR 2.3;
+		}
+		LEVEL 0 FOR 1.322;
+		LEVEL 1 FOR 2.45;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.55;
+			LEVEL 1 FOR 2.45;
+		}
+		LEVEL 0 FOR 1.492;
+	}
+}
+
+TRANSITION_LIST("D7")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 0.903;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.667;
+			LEVEL 1 FOR 2.999;
+		}
+		LEVEL 0 FOR 3.667;
+		LEVEL 1 FOR 2.349;
+		LEVEL 0 FOR 2.134;
+		LEVEL 1 FOR 1.199;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.134;
+			LEVEL 1 FOR 1.199;
+		}
+		LEVEL 0 FOR 2.134;
+		LEVEL 1 FOR 0.949;
+		LEVEL 0 FOR 7.455;
+		LEVEL 1 FOR 6.4;
+		LEVEL 0 FOR 8.685;
+		LEVEL 1 FOR 1.65;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.35;
+			LEVEL 1 FOR 1.65;
+		}
+		LEVEL 0 FOR 4.548;
+		LEVEL 1 FOR 3.3;
+		LEVEL 0 FOR 4.626;
+		LEVEL 1 FOR 2.05;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.95;
+			LEVEL 1 FOR 2.05;
+		}
+		LEVEL 0 FOR 5.528;
+		LEVEL 1 FOR 3.6;
+		LEVEL 0 FOR 2.158;
+		LEVEL 1 FOR 1.681;
+		LEVEL 0 FOR 12.2;
+		LEVEL 1 FOR 6.119;
+		LEVEL 0 FOR 1.064;
+		LEVEL 1 FOR 9.8;
+		LEVEL 0 FOR 9.136;
+		LEVEL 1 FOR 2.538;
+		LEVEL 0 FOR 13.0;
+		LEVEL 1 FOR 4.462;
+		LEVEL 0 FOR 4.408;
+		LEVEL 1 FOR 8.6;
+		LEVEL 0 FOR 6.992;
+		LEVEL 1 FOR 2.013;
+		LEVEL 0 FOR 6.4;
+		LEVEL 1 FOR 1.587;
+		LEVEL 0 FOR 11.82;
+		LEVEL 1 FOR 6.4;
+		LEVEL 0 FOR 1.78;
+		LEVEL 1 FOR 0.767;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.334;
+			LEVEL 1 FOR 0.999;
+		}
+		LEVEL 0 FOR 2.334;
+		LEVEL 1 FOR 0.233;
+		LEVEL 0 FOR 1.06;
+		LEVEL 1 FOR 1.933;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.4;
+			LEVEL 1 FOR 1.933;
+		}
+		LEVEL 0 FOR 4.879;
+		LEVEL 1 FOR 3.3;
+		LEVEL 0 FOR 5.513;
+		LEVEL 1 FOR 2.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.067;
+			LEVEL 1 FOR 2.599;
+		}
+		LEVEL 0 FOR 0.718;
+		LEVEL 1 FOR 0.883;
+		LEVEL 0 FOR 11.8;
+		LEVEL 1 FOR 8.868;
+		LEVEL 0 FOR 5.2;
+		LEVEL 1 FOR 3.77;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 2.757;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 1.772;
+		LEVEL 0 FOR 5.29;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 1.21;
+		LEVEL 1 FOR 2.475;
+		LEVEL 0 FOR 10.4;
+		LEVEL 1 FOR 8.28;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 0.895;
+		LEVEL 0 FOR 0.162;
+		LEVEL 1 FOR 5.8;
+		LEVEL 0 FOR 4.16;
+		LEVEL 1 FOR 1.9;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 2.978;
+		LEVEL 1 FOR 0.63;
+		LEVEL 0 FOR 9.4;
+		LEVEL 1 FOR 9.97;
+		LEVEL 0 FOR 2.974;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 1.161;
+		LEVEL 1 FOR 0.612;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.134;
+			LEVEL 1 FOR 1.199;
+		}
+		LEVEL 0 FOR 2.134;
+		LEVEL 1 FOR 0.588;
+		LEVEL 0 FOR 1.593;
+		LEVEL 1 FOR 2.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 2.0;
+		}
+		LEVEL 0 FOR 1.407;
+		LEVEL 1 FOR 3.005;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.1;
+			LEVEL 1 FOR 3.9;
+		}
+		LEVEL 0 FOR 6.1;
+		LEVEL 1 FOR 0.895;
+		LEVEL 0 FOR 2.784;
+		LEVEL 1 FOR 3.4;
+		LEVEL 0 FOR 4.248;
+		LEVEL 1 FOR 3.666;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 3.666;
+		}
+		LEVEL 0 FOR 2.57;
+		LEVEL 1 FOR 2.473;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 0.795;
+		LEVEL 0 FOR 2.356;
+		LEVEL 1 FOR 2.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.6;
+			LEVEL 1 FOR 2.4;
+		}
+		LEVEL 0 FOR 1.185;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 1.738;
+		LEVEL 1 FOR 4.5;
+		LEVEL 0 FOR 5.122;
+		LEVEL 1 FOR 0.738;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.234;
+			LEVEL 1 FOR 1.099;
+		}
+		LEVEL 0 FOR 2.234;
+		LEVEL 1 FOR 0.362;
+		LEVEL 0 FOR 3.121;
+		LEVEL 1 FOR 8.8;
+		LEVEL 0 FOR 9.704;
+		LEVEL 1 FOR 2.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.7;
+			LEVEL 1 FOR 2.3;
+		}
+		LEVEL 0 FOR 1.075;
+		LEVEL 1 FOR 0.279;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.2;
+			LEVEL 1 FOR 3.8;
+		}
+		LEVEL 0 FOR 6.2;
+		LEVEL 1 FOR 3.521;
+		LEVEL 0 FOR 2.885;
+		LEVEL 1 FOR 1.75;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.25;
+			LEVEL 1 FOR 1.75;
+		}
+		LEVEL 0 FOR 0.365;
+		LEVEL 1 FOR 0.201;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 1.6;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 1.399;
+		LEVEL 0 FOR 5.585;
+		LEVEL 1 FOR 4.1;
+		LEVEL 0 FOR 0.315;
+		LEVEL 1 FOR 0.349;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.7;
+			LEVEL 1 FOR 1.633;
+		}
+		LEVEL 0 FOR 1.7;
+		LEVEL 1 FOR 1.285;
+		LEVEL 0 FOR 0.69;
+		LEVEL 1 FOR 6.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.0;
+			LEVEL 1 FOR 6.0;
+		}
+		LEVEL 0 FOR 3.31;
+		LEVEL 1 FOR 1.602;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.2;
+			LEVEL 1 FOR 2.466;
+		}
+		LEVEL 0 FOR 4.2;
+		LEVEL 1 FOR 5.46;
+		LEVEL 0 FOR 5.1;
+		LEVEL 1 FOR 4.9;
+		LEVEL 0 FOR 5.1;
+		LEVEL 1 FOR 0.306;
+		LEVEL 0 FOR 4.714;
+		LEVEL 1 FOR 6.4;
+		LEVEL 0 FOR 8.886;
+		LEVEL 1 FOR 0.124;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 3.1;
+		LEVEL 1 FOR 1.776;
+		LEVEL 0 FOR 3.309;
+		LEVEL 1 FOR 6.6;
+		LEVEL 0 FOR 10.271;
+		LEVEL 1 FOR 1.366;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.967;
+			LEVEL 1 FOR 1.366;
+		}
+		LEVEL 0 FOR 9.017;
+		LEVEL 1 FOR 8.4;
+		LEVEL 0 FOR 6.019;
+		LEVEL 1 FOR 3.799;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.867;
+			LEVEL 1 FOR 3.799;
+		}
+		LEVEL 0 FOR 3.804;
+		LEVEL 1 FOR 1.9;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 0.972;
+		LEVEL 1 FOR 4.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.6;
+			LEVEL 1 FOR 4.4;
+		}
+		LEVEL 0 FOR 6.104;
+		LEVEL 1 FOR 1.799;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.534;
+			LEVEL 1 FOR 1.799;
+		}
+		LEVEL 0 FOR 0.576;
+		LEVEL 1 FOR 0.903;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 3.1;
+		LEVEL 1 FOR 0.997;
+		LEVEL 0 FOR 0.22;
+		LEVEL 1 FOR 3.9;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.1;
+			LEVEL 1 FOR 3.9;
+		}
+		LEVEL 0 FOR 5.88;
+		LEVEL 1 FOR 0.745;
+		LEVEL 0 FOR 6.2;
+		LEVEL 1 FOR 4.655;
+		LEVEL 0 FOR 3.6;
+		LEVEL 1 FOR 3.066;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.6;
+			LEVEL 1 FOR 3.066;
+		}
+		LEVEL 0 FOR 3.6;
+		LEVEL 1 FOR 2.814;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 3.1;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 1.754;
+		LEVEL 0 FOR 0.545;
+		LEVEL 1 FOR 1.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.934;
+			LEVEL 1 FOR 1.399;
+		}
+		LEVEL 0 FOR 1.39;
+		LEVEL 1 FOR 0.591;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.167;
+			LEVEL 1 FOR 1.166;
+		}
+		LEVEL 0 FOR 2.167;
+		LEVEL 1 FOR 2.509;
+		LEVEL 0 FOR 2.65;
+		LEVEL 1 FOR 2.35;
+		LEVEL 0 FOR 2.65;
+		LEVEL 1 FOR 0.417;
+		LEVEL 0 FOR 3.921;
+		LEVEL 1 FOR 3.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.9;
+			LEVEL 1 FOR 3.1;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 2.65;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.35;
+			LEVEL 1 FOR 2.65;
+		}
+		LEVEL 0 FOR 2.015;
+		LEVEL 1 FOR 5.7;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.3;
+			LEVEL 1 FOR 5.7;
+		}
+		LEVEL 0 FOR 6.583;
+		LEVEL 1 FOR 2.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.7;
+			LEVEL 1 FOR 2.3;
+		}
+		LEVEL 0 FOR 1.322;
+		LEVEL 1 FOR 2.45;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.55;
+			LEVEL 1 FOR 2.45;
+		}
+		LEVEL 0 FOR 1.492;
+	}
+}
+
+TRANSITION_LIST("negL0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 0.903;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.667;
+			LEVEL 1 FOR 2.999;
+		}
+		LEVEL 0 FOR 3.667;
+		LEVEL 1 FOR 2.349;
+		LEVEL 0 FOR 2.134;
+		LEVEL 1 FOR 1.199;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.134;
+			LEVEL 1 FOR 1.199;
+		}
+		LEVEL 0 FOR 2.134;
+		LEVEL 1 FOR 0.949;
+		LEVEL 0 FOR 7.455;
+		LEVEL 1 FOR 6.4;
+		LEVEL 0 FOR 8.685;
+		LEVEL 1 FOR 1.65;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.35;
+			LEVEL 1 FOR 1.65;
+		}
+		LEVEL 0 FOR 4.548;
+		LEVEL 1 FOR 3.3;
+		LEVEL 0 FOR 4.626;
+		LEVEL 1 FOR 2.05;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.95;
+			LEVEL 1 FOR 2.05;
+		}
+		LEVEL 0 FOR 5.528;
+		LEVEL 1 FOR 3.6;
+		LEVEL 0 FOR 2.158;
+		LEVEL 1 FOR 1.681;
+		LEVEL 0 FOR 12.2;
+		LEVEL 1 FOR 6.119;
+		LEVEL 0 FOR 1.064;
+		LEVEL 1 FOR 9.8;
+		LEVEL 0 FOR 9.136;
+		LEVEL 1 FOR 2.538;
+		LEVEL 0 FOR 13.0;
+		LEVEL 1 FOR 4.462;
+		LEVEL 0 FOR 4.408;
+		LEVEL 1 FOR 8.6;
+		LEVEL 0 FOR 6.992;
+		LEVEL 1 FOR 2.013;
+		LEVEL 0 FOR 6.4;
+		LEVEL 1 FOR 1.587;
+		LEVEL 0 FOR 11.82;
+		LEVEL 1 FOR 6.4;
+		LEVEL 0 FOR 1.78;
+		LEVEL 1 FOR 0.767;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.334;
+			LEVEL 1 FOR 0.999;
+		}
+		LEVEL 0 FOR 2.334;
+		LEVEL 1 FOR 0.233;
+		LEVEL 0 FOR 1.06;
+		LEVEL 1 FOR 1.933;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.4;
+			LEVEL 1 FOR 1.933;
+		}
+		LEVEL 0 FOR 4.879;
+		LEVEL 1 FOR 3.3;
+		LEVEL 0 FOR 5.513;
+		LEVEL 1 FOR 2.599;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.067;
+			LEVEL 1 FOR 2.599;
+		}
+		LEVEL 0 FOR 0.718;
+		LEVEL 1 FOR 0.883;
+		LEVEL 0 FOR 11.8;
+		LEVEL 1 FOR 8.868;
+		LEVEL 0 FOR 5.2;
+		LEVEL 1 FOR 3.77;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 2.757;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 3.0;
+		LEVEL 0 FOR 2.0;
+		LEVEL 1 FOR 1.772;
+		LEVEL 0 FOR 5.29;
+		LEVEL 1 FOR 3.5;
+		LEVEL 0 FOR 1.21;
+		LEVEL 1 FOR 2.475;
+		LEVEL 0 FOR 10.4;
+		LEVEL 1 FOR 8.28;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 2.05;
+		LEVEL 0 FOR 2.95;
+		LEVEL 1 FOR 0.895;
+		LEVEL 0 FOR 0.162;
+		LEVEL 1 FOR 5.8;
+		LEVEL 0 FOR 4.16;
+		LEVEL 1 FOR 1.9;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 2.978;
+		LEVEL 1 FOR 0.63;
+		LEVEL 0 FOR 9.4;
+		LEVEL 1 FOR 9.97;
+		LEVEL 0 FOR 2.974;
+		LEVEL 1 FOR 2.533;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.133;
+			LEVEL 1 FOR 2.533;
+		}
+		LEVEL 0 FOR 1.161;
+		LEVEL 1 FOR 0.612;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.134;
+			LEVEL 1 FOR 1.199;
+		}
+		LEVEL 0 FOR 2.134;
+		LEVEL 1 FOR 0.588;
+		LEVEL 0 FOR 1.593;
+		LEVEL 1 FOR 2.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 2.0;
+		}
+		LEVEL 0 FOR 1.407;
+		LEVEL 1 FOR 3.005;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.1;
+			LEVEL 1 FOR 3.9;
+		}
+		LEVEL 0 FOR 6.1;
+		LEVEL 1 FOR 0.895;
+		LEVEL 0 FOR 2.784;
+		LEVEL 1 FOR 3.4;
+		LEVEL 0 FOR 4.248;
+		LEVEL 1 FOR 3.666;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.0;
+			LEVEL 1 FOR 3.666;
+		}
+		LEVEL 0 FOR 2.57;
+		LEVEL 1 FOR 2.473;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 3.266;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 0.795;
+		LEVEL 0 FOR 2.356;
+		LEVEL 1 FOR 2.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.6;
+			LEVEL 1 FOR 2.4;
+		}
+		LEVEL 0 FOR 1.185;
+		LEVEL 1 FOR 1.033;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.3;
+			LEVEL 1 FOR 1.033;
+		}
+		LEVEL 0 FOR 1.738;
+		LEVEL 1 FOR 4.5;
+		LEVEL 0 FOR 5.122;
+		LEVEL 1 FOR 0.738;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.234;
+			LEVEL 1 FOR 1.099;
+		}
+		LEVEL 0 FOR 2.234;
+		LEVEL 1 FOR 0.362;
+		LEVEL 0 FOR 3.121;
+		LEVEL 1 FOR 8.8;
+		LEVEL 0 FOR 9.704;
+		LEVEL 1 FOR 2.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.7;
+			LEVEL 1 FOR 2.3;
+		}
+		LEVEL 0 FOR 1.075;
+		LEVEL 1 FOR 0.279;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.2;
+			LEVEL 1 FOR 3.8;
+		}
+		LEVEL 0 FOR 6.2;
+		LEVEL 1 FOR 3.521;
+		LEVEL 0 FOR 2.885;
+		LEVEL 1 FOR 1.75;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.25;
+			LEVEL 1 FOR 1.75;
+		}
+		LEVEL 0 FOR 0.365;
+		LEVEL 1 FOR 0.201;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.4;
+			LEVEL 1 FOR 1.6;
+		}
+		LEVEL 0 FOR 3.4;
+		LEVEL 1 FOR 1.399;
+		LEVEL 0 FOR 5.585;
+		LEVEL 1 FOR 4.1;
+		LEVEL 0 FOR 0.315;
+		LEVEL 1 FOR 0.349;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.7;
+			LEVEL 1 FOR 1.633;
+		}
+		LEVEL 0 FOR 1.7;
+		LEVEL 1 FOR 1.285;
+		LEVEL 0 FOR 0.69;
+		LEVEL 1 FOR 6.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.0;
+			LEVEL 1 FOR 6.0;
+		}
+		LEVEL 0 FOR 3.31;
+		LEVEL 1 FOR 1.602;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 4.2;
+			LEVEL 1 FOR 2.466;
+		}
+		LEVEL 0 FOR 4.2;
+		LEVEL 1 FOR 5.46;
+		LEVEL 0 FOR 5.1;
+		LEVEL 1 FOR 4.9;
+		LEVEL 0 FOR 5.1;
+		LEVEL 1 FOR 0.306;
+		LEVEL 0 FOR 4.714;
+		LEVEL 1 FOR 6.4;
+		LEVEL 0 FOR 8.886;
+		LEVEL 1 FOR 0.124;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 3.1;
+		LEVEL 1 FOR 1.776;
+		LEVEL 0 FOR 3.309;
+		LEVEL 1 FOR 6.6;
+		LEVEL 0 FOR 10.271;
+		LEVEL 1 FOR 1.366;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.967;
+			LEVEL 1 FOR 1.366;
+		}
+		LEVEL 0 FOR 9.017;
+		LEVEL 1 FOR 8.4;
+		LEVEL 0 FOR 6.019;
+		LEVEL 1 FOR 3.799;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.867;
+			LEVEL 1 FOR 3.799;
+		}
+		LEVEL 0 FOR 3.804;
+		LEVEL 1 FOR 1.9;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 0.972;
+		LEVEL 1 FOR 4.4;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 5.6;
+			LEVEL 1 FOR 4.4;
+		}
+		LEVEL 0 FOR 6.104;
+		LEVEL 1 FOR 1.799;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.534;
+			LEVEL 1 FOR 1.799;
+		}
+		LEVEL 0 FOR 0.576;
+		LEVEL 1 FOR 0.903;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.1;
+			LEVEL 1 FOR 1.9;
+		}
+		LEVEL 0 FOR 3.1;
+		LEVEL 1 FOR 0.997;
+		LEVEL 0 FOR 0.22;
+		LEVEL 1 FOR 3.9;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.1;
+			LEVEL 1 FOR 3.9;
+		}
+		LEVEL 0 FOR 5.88;
+		LEVEL 1 FOR 0.745;
+		LEVEL 0 FOR 6.2;
+		LEVEL 1 FOR 4.655;
+		LEVEL 0 FOR 3.6;
+		LEVEL 1 FOR 3.066;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 3.6;
+			LEVEL 1 FOR 3.066;
+		}
+		LEVEL 0 FOR 3.6;
+		LEVEL 1 FOR 2.814;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 3.1;
+		LEVEL 0 FOR 6.9;
+		LEVEL 1 FOR 1.754;
+		LEVEL 0 FOR 0.545;
+		LEVEL 1 FOR 1.399;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 1.934;
+			LEVEL 1 FOR 1.399;
+		}
+		LEVEL 0 FOR 1.39;
+		LEVEL 1 FOR 0.591;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 2.167;
+			LEVEL 1 FOR 1.166;
+		}
+		LEVEL 0 FOR 2.167;
+		LEVEL 1 FOR 2.509;
+		LEVEL 0 FOR 2.65;
+		LEVEL 1 FOR 2.35;
+		LEVEL 0 FOR 2.65;
+		LEVEL 1 FOR 0.417;
+		LEVEL 0 FOR 3.921;
+		LEVEL 1 FOR 3.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 6.9;
+			LEVEL 1 FOR 3.1;
+		}
+		LEVEL 0 FOR 3.467;
+		LEVEL 1 FOR 2.65;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.35;
+			LEVEL 1 FOR 2.65;
+		}
+		LEVEL 0 FOR 2.015;
+		LEVEL 1 FOR 5.7;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 4.3;
+			LEVEL 1 FOR 5.7;
+		}
+		LEVEL 0 FOR 6.583;
+		LEVEL 1 FOR 2.3;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.7;
+			LEVEL 1 FOR 2.3;
+		}
+		LEVEL 0 FOR 1.322;
+		LEVEL 1 FOR 2.45;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 2.55;
+			LEVEL 1 FOR 2.45;
+		}
+		LEVEL 0 FOR 1.492;
+	}
+}
+
+TRANSITION_LIST("Q0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Q1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Q2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Q3")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Q4")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Q5")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Q6")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Q7")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CLK";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "D0";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "D1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "D2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "D3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "D4";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "D5";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "D6";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "D7";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "negL0";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q0";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q4";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q5";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q6";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q7";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 0;
+	MASTER = TRUE;
+}
+;
