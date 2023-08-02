@@ -1,5 +1,7 @@
 vendor_name = ModelSim
+source_file = 1, D:/componentes-quartus-sap1/sap-1/RegistradorSaida/RegistradorSaida.bsf
 source_file = 1, D:/componentes-quartus-sap1/sap-1/RegistradorSaida/RegistradorSaida.bdf
+source_file = 1, D:/componentes-quartus-sap1/sap-1/RegistradorSaida/Waveform.vwf
 source_file = 1, D:/componentes-quartus-sap1/sap-1/RegistradorSaida/alp74ls173.bdf
 design_name = RegistradorSaida
 instance = comp, \Q0~output , Q0~output, RegistradorSaida, 1
