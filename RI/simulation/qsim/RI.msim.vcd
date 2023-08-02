@@ -1,0 +1,681 @@
+$comment
+	File created using the following command:
+		vcd file RI.msim.vcd -direction
+$end
+$date
+	Tue Aug 01 21:23:50 2023
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module RI_vlg_vec_tst $end
+$var reg 1 ! CLK $end
+$var reg 1 " CLR $end
+$var reg 1 # ENABLE $end
+$var reg 1 $ I0 $end
+$var reg 1 % I1 $end
+$var reg 1 & I2 $end
+$var reg 1 ' I3 $end
+$var reg 1 ( I4 $end
+$var reg 1 ) I5 $end
+$var reg 1 * I6 $end
+$var reg 1 + I7 $end
+$var reg 1 , LOAD $end
+$var wire 1 - O0 $end
+$var wire 1 . O1 $end
+$var wire 1 / O2 $end
+$var wire 1 0 O3 $end
+$var wire 1 1 O4 $end
+$var wire 1 2 O5 $end
+$var wire 1 3 O6 $end
+$var wire 1 4 O7 $end
+
+$scope module i1 $end
+$var wire 1 5 gnd $end
+$var wire 1 6 vcc $end
+$var wire 1 7 unknown $end
+$var tri1 1 8 devclrn $end
+$var tri1 1 9 devpor $end
+$var tri1 1 : devoe $end
+$var wire 1 ; ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 < ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 = ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 > O0~output_o $end
+$var wire 1 ? O1~output_o $end
+$var wire 1 @ O2~output_o $end
+$var wire 1 A O3~output_o $end
+$var wire 1 B O4~output_o $end
+$var wire 1 C O5~output_o $end
+$var wire 1 D O6~output_o $end
+$var wire 1 E O7~output_o $end
+$var wire 1 F CLK~input_o $end
+$var wire 1 G CLK~inputclkctrl_outclk $end
+$var wire 1 H I0~input_o $end
+$var wire 1 I inst|inst20~feeder_combout $end
+$var wire 1 J LOAD~input_o $end
+$var wire 1 K inst|inst20~q $end
+$var wire 1 L ENABLE~input_o $end
+$var wire 1 M I1~input_o $end
+$var wire 1 N inst|inst21~feeder_combout $end
+$var wire 1 O inst|inst21~q $end
+$var wire 1 P I2~input_o $end
+$var wire 1 Q inst|inst22~feeder_combout $end
+$var wire 1 R inst|inst22~q $end
+$var wire 1 S I3~input_o $end
+$var wire 1 T inst|inst23~q $end
+$var wire 1 U I4~input_o $end
+$var wire 1 V inst1|inst20~feeder_combout $end
+$var wire 1 W CLR~input_o $end
+$var wire 1 X CLR~inputclkctrl_outclk $end
+$var wire 1 Y inst1|inst20~q $end
+$var wire 1 Z I5~input_o $end
+$var wire 1 [ inst1|inst21~q $end
+$var wire 1 \ I6~input_o $end
+$var wire 1 ] inst1|inst22~feeder_combout $end
+$var wire 1 ^ inst1|inst22~q $end
+$var wire 1 _ I7~input_o $end
+$var wire 1 ` inst1|inst23~q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+1$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+1,
+0-
+0.
+0/
+00
+01
+02
+03
+04
+05
+16
+x7
+18
+19
+1:
+0;
+z<
+z=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+1H
+1I
+1J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+$end
+#10000
+1!
+1F
+1G
+#20000
+0!
+0F
+0G
+#30000
+1!
+1F
+1G
+#40000
+1%
+0!
+0F
+1M
+0G
+1N
+#50000
+1!
+1F
+1G
+#60000
+0!
+0F
+0G
+#70000
+1!
+1F
+1G
+#80000
+1&
+1'
+1(
+0!
+0F
+1U
+1S
+1P
+0G
+1V
+1Q
+#90000
+1!
+1F
+1G
+#100000
+0!
+0F
+0G
+#110000
+1!
+1F
+1G
+#120000
+0$
+0,
+0!
+0F
+0J
+0H
+0G
+0I
+#130000
+1!
+1F
+1G
+1Y
+1T
+1R
+1O
+1?
+1@
+1A
+1B
+11
+10
+1/
+1.
+#140000
+0!
+0F
+0G
+#150000
+1!
+1F
+1G
+#160000
+0!
+0F
+0G
+#170000
+1!
+1F
+1G
+#180000
+0!
+0F
+0G
+#190000
+1!
+1F
+1G
+#200000
+0!
+0F
+0G
+#210000
+1!
+1F
+1G
+#220000
+0!
+0F
+0G
+#230000
+1!
+1F
+1G
+#240000
+0%
+0&
+0'
+0(
+0!
+0F
+0U
+0S
+0P
+0M
+0G
+0V
+0Q
+0N
+#250000
+1!
+1F
+1G
+0Y
+0T
+0R
+0O
+0?
+0@
+0A
+0B
+01
+00
+0/
+0.
+#260000
+0!
+0F
+0G
+#270000
+1!
+1F
+1G
+#280000
+0!
+0F
+0G
+#290000
+1!
+1F
+1G
+#300000
+0!
+0F
+0G
+#310000
+1!
+1F
+1G
+#320000
+1)
+1*
+1+
+1&
+1'
+1(
+0!
+0F
+1U
+1S
+1P
+1_
+1\
+1Z
+0G
+1V
+1Q
+1]
+#330000
+1!
+1F
+1G
+1`
+1^
+1[
+1Y
+1T
+1R
+1@
+1A
+1B
+1C
+1D
+1E
+14
+13
+12
+11
+10
+1/
+#340000
+0!
+0F
+0G
+#350000
+1!
+1F
+1G
+#360000
+0!
+0F
+0G
+#370000
+1,
+1!
+1F
+1J
+1G
+#380000
+0!
+0F
+0G
+#390000
+1!
+1F
+1G
+#400000
+0+
+0!
+0F
+0_
+0G
+#410000
+1!
+1F
+1G
+#420000
+0!
+0F
+0G
+#430000
+1!
+1F
+1G
+#440000
+0!
+0F
+0G
+#450000
+0(
+0,
+1!
+1F
+0J
+0U
+1G
+0V
+0`
+0E
+04
+#460000
+0!
+0F
+0G
+#470000
+1!
+1F
+1G
+0Y
+0B
+01
+#480000
+0!
+0F
+0G
+#490000
+1!
+1F
+1G
+#500000
+0!
+0F
+0G
+#510000
+1!
+1F
+1G
+#520000
+0&
+0'
+0!
+0F
+0S
+0P
+0G
+0Q
+#530000
+1!
+1F
+1G
+0T
+0R
+0@
+0A
+00
+0/
+#540000
+0!
+0F
+0G
+#550000
+1!
+1F
+1G
+#560000
+0)
+0*
+0!
+0F
+0\
+0Z
+0G
+0]
+#570000
+1!
+1F
+1G
+0^
+0[
+0C
+0D
+03
+02
+#580000
+1,
+0!
+0F
+1J
+0G
+#590000
+1!
+1F
+1G
+#600000
+0!
+0F
+0G
+#610000
+1#
+1!
+1F
+1L
+1G
+zA
+z@
+z?
+z>
+z-
+z.
+z/
+z0
+#620000
+0!
+0F
+0G
+#630000
+1!
+1F
+1G
+#640000
+0!
+0F
+0G
+#650000
+1!
+1F
+1G
+#660000
+0!
+0F
+0G
+#670000
+1!
+1F
+1G
+#680000
+0!
+0F
+0G
+#690000
+1!
+1F
+1G
+#700000
+0!
+0F
+0G
+#710000
+1!
+1F
+1G
+#720000
+0!
+0F
+0G
+#730000
+1!
+1F
+1G
+#740000
+0!
+0F
+0G
+#750000
+1!
+1F
+1G
+#760000
+0!
+0F
+0G
+#770000
+1!
+1F
+1G
+#780000
+0!
+0F
+0G
+#790000
+1!
+1F
+1G
+#800000
+0!
+0F
+0G
+#810000
+1!
+1F
+1G
+#820000
+0!
+0F
+0G
+#830000
+1!
+1F
+1G
+#840000
+0!
+0F
+0G
+#850000
+1!
+1F
+1G
+#860000
+0!
+0F
+0G
+#870000
+1!
+1F
+1G
+#880000
+0!
+0F
+0G
+#890000
+1!
+1F
+1G
+#900000
+0!
+0F
+0G
+#910000
+1!
+1F
+1G
+#920000
+0!
+0F
+0G
+#930000
+1!
+1F
+1G
+#940000
+0!
+0F
+0G
+#950000
+1!
+1F
+1G
+#960000
+0!
+0F
+0G
+#970000
+1!
+1F
+1G
+#980000
+0!
+0F
+0G
+#990000
+1!
+1F
+1G
+#1000000

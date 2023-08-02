@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Projetos_Quartus/Capivarias/RI/simulation/qsim
+vhard_block
+Z1 !s110 1690935829
+!i10b 1
+!s100 ;jUR>fV6c@NlWN@lOG]mH0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IDjgB0k32md<Fj`cLQ`:fE0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1690935829
+Z5 8RI.vo
+Z6 FRI.vo
+!i122 2
+L0 759 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1690935829.000000
+Z9 !s107 RI.vo|
+Z10 !s90 -work|work|RI.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vRI
+R1
+!i10b 1
+!s100 M_LA8Z83FSG>AWZgO[^C?1
+R2
+I<jjW95ZFk57GzkS>zKhNE2
+R3
+R0
+R4
+R5
+R6
+!i122 2
+L0 32 726
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@r@i
+vRI_vlg_vec_tst
+!s110 1690935830
+!i10b 1
+!s100 j>jT8MfhkA3HPPBU14G472
+R2
+IA=NP5S0J5m8COW9JICeU52
+R3
+R0
+w1690935828
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 3
+L0 30 154
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@r@i_vlg_vec_tst
