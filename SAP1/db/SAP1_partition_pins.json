@@ -1,0 +1,173 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "NCLK",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NLO",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NLB",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_EU",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_SU",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_EA",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NLA",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NLI",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NCE",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NLM",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_EP",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_CP",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NHLT",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY0",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY1",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY2",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY3",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY4",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY5",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY6",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY7",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NEI",
+					"strict" : false
+				},
+				{
+					"name" : "ENCLOCKAUTO",
+					"strict" : false
+				},
+				{
+					"name" : "CLKMANUAL",
+					"strict" : false
+				},
+				{
+					"name" : "CLEAR",
+					"strict" : false
+				},
+				{
+					"name" : "B",
+					"strict" : false
+				},
+				{
+					"name" : "ENAUTOADDRESS",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				},
+				{
+					"name" : "D",
+					"strict" : false
+				},
+				{
+					"name" : "A",
+					"strict" : false
+				},
+				{
+					"name" : "CLKAUTO",
+					"strict" : false
+				},
+				{
+					"name" : "D5",
+					"strict" : false
+				},
+				{
+					"name" : "D6",
+					"strict" : false
+				},
+				{
+					"name" : "D7",
+					"strict" : false
+				},
+				{
+					"name" : "D4",
+					"strict" : false
+				},
+				{
+					"name" : "D0",
+					"strict" : false
+				},
+				{
+					"name" : "D1",
+					"strict" : false
+				},
+				{
+					"name" : "D2",
+					"strict" : false
+				},
+				{
+					"name" : "D3",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
