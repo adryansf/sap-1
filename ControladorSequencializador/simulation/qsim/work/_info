@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Projetos_Quartus/Capivarias/ControladorSequencializador/simulation/qsim
+vControladorSequencializador
+Z1 !s110 1691026248
+!i10b 1
+!s100 ^jG2YJj4X_]MQn0Bf5QEi1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I<;3hBh1z?10z4Z6@AKO_f3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1691026247
+Z5 8ControladorSequencializador.vo
+Z6 FControladorSequencializador.vo
+!i122 10
+L0 32 901
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1691026248.000000
+Z9 !s107 ControladorSequencializador.vo|
+Z10 !s90 -work|work|ControladorSequencializador.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@controlador@sequencializador
+vControladorSequencializador_vlg_vec_tst
+R1
+!i10b 1
+!s100 :EWJIBLF^Gi5^JWY3jl?X1
+R2
+ITbP2LbL70OcF;gonCC7V;1
+R3
+R0
+w1691026246
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 11
+L0 30 122
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@controlador@sequencializador_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 =9k_>z]WhS3E38<O09l8]3
+R2
+IoMdF9o;J[W8`]lhVIh0E91
+R3
+R0
+R4
+R5
+R6
+!i122 10
+L0 934 45
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12

@@ -1,0 +1,95 @@
+|ControladorSequencializador
+NHLT <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+I7 => inst15.IN0
+I7 => inst80.IN0
+I7 => inst13.IN0
+I4 => inst15.IN1
+I4 => inst12.IN0
+I4 => inst8.IN1
+I6 => inst15.IN2
+I6 => inst10.IN0
+I6 => inst13.IN2
+I5 => inst15.IN3
+I5 => inst9.IN3
+I5 => inst11.IN0
+I5 => inst13.IN3
+CP <= ALP74LS107:inst6.Q
+CLK => ALP74LS107:inst5.CLK
+CLK => ALP74LS107:inst4.CLK
+CLK => ALP74LS107:inst3.CLK
+CLK => ALP74LS107:inst.CLK
+CLK => ALP74LS107:inst7.CLK
+CLK => ALP74LS107:inst6.CLK
+CLR => ALP74LS107:inst5.CLR
+CLR => ALP74LS107:inst4.CLR
+CLR => ALP74LS107:inst3.CLR
+CLR => ALP74LS107:inst.CLR
+CLR => ALP74LS107:inst7.CLR
+CLR => ALP74LS107:inst6.CLR
+EP <= ALP74LS107:inst7.NQ
+NLM <= inst29.DB_MAX_OUTPUT_PORT_TYPE
+NCE <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+NLI <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+NE1 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+NLA <= inst48.DB_MAX_OUTPUT_PORT_TYPE
+EA <= inst53.DB_MAX_OUTPUT_PORT_TYPE
+SU <= inst56.DB_MAX_OUTPUT_PORT_TYPE
+EU <= inst66.DB_MAX_OUTPUT_PORT_TYPE
+NLB <= inst61.DB_MAX_OUTPUT_PORT_TYPE
+NLO <= inst59.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControladorSequencializador|ALP74LS107:inst6
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+K => inst.IN0
+J => inst.IN1
+CLK => inst.CLK
+NQ <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControladorSequencializador|ALP74LS107:inst7
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+K => inst.IN0
+J => inst.IN1
+CLK => inst.CLK
+NQ <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControladorSequencializador|ALP74LS107:inst
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+K => inst.IN0
+J => inst.IN1
+CLK => inst.CLK
+NQ <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControladorSequencializador|ALP74LS107:inst3
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+K => inst.IN0
+J => inst.IN1
+CLK => inst.CLK
+NQ <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControladorSequencializador|ALP74LS107:inst4
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+K => inst.IN0
+J => inst.IN1
+CLK => inst.CLK
+NQ <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ControladorSequencializador|ALP74LS107:inst5
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+K => inst.IN0
+J => inst.IN1
+CLK => inst.CLK
+NQ <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
