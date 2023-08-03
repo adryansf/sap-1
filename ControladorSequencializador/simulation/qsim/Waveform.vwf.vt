@@ -1,0 +1,152 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "08/02/2023 22:30:46"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          ControladorSequencializador
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module ControladorSequencializador_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg CLR;
+reg I4;
+reg I5;
+reg I6;
+reg I7;
+// wires                                               
+wire CP;
+wire EA;
+wire EP;
+wire EU;
+wire NCE;
+wire NE1;
+wire NHLT;
+wire NLA;
+wire NLB;
+wire NLI;
+wire NLM;
+wire NLO;
+wire SU;
+
+// assign statements (if any)                          
+ControladorSequencializador i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.CLR(CLR),
+	.CP(CP),
+	.EA(EA),
+	.EP(EP),
+	.EU(EU),
+	.I4(I4),
+	.I5(I5),
+	.I6(I6),
+	.I7(I7),
+	.NCE(NCE),
+	.NE1(NE1),
+	.NHLT(NHLT),
+	.NLA(NLA),
+	.NLB(NLB),
+	.NLI(NLI),
+	.NLM(NLM),
+	.NLO(NLO),
+	.SU(SU)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// CLK
+initial
+begin
+	CLK = 1'b1;
+	# 10000;
+	repeat(49)
+	begin
+		CLK = 1'b0;
+		CLK = #10000 1'b1;
+		# 10000;
+	end
+	CLK = 1'b0;
+end 
+
+// I4
+initial
+begin
+	I4 = 1'b0;
+	I4 = #160000 1'b1;
+	I4 = #200000 1'b0;
+	I4 = #470000 1'b1;
+	I4 = #50000 1'b0;
+end 
+
+// I5
+initial
+begin
+	I5 = 1'b0;
+	I5 = #360000 1'b1;
+	I5 = #400000 1'b0;
+	I5 = #70000 1'b1;
+	I5 = #50000 1'b0;
+end 
+
+// I6
+initial
+begin
+	I6 = 1'b0;
+	I6 = #560000 1'b1;
+	I6 = #200000 1'b0;
+	I6 = #70000 1'b1;
+	I6 = #50000 1'b0;
+end 
+
+// I7
+initial
+begin
+	I7 = 1'b0;
+	I7 = #560000 1'b1;
+	I7 = #200000 1'b0;
+	I7 = #70000 1'b1;
+	I7 = #50000 1'b0;
+end 
+
+// CLR
+initial
+begin
+	CLR = 1'b0;
+	CLR = #20000 1'b1;
+	CLR = #140000 1'b0;
+	CLR = #20000 1'b1;
+	CLR = #180000 1'b0;
+	CLR = #30000 1'b1;
+	CLR = #170000 1'b0;
+	CLR = #20000 1'b1;
+	CLR = #180000 1'b0;
+	CLR = #20000 1'b1;
+	CLR = #140000 1'b0;
+end 
+endmodule
+
