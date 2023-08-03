@@ -1,0 +1,65 @@
+|RegistradorSaida
+Q0 <= ALP74LS173:inst.Q0
+D0 => ALP74LS173:inst.D0
+D1 => ALP74LS173:inst.D1
+D2 => ALP74LS173:inst.D2
+D3 => ALP74LS173:inst.D3
+negL0 => ALP74LS173:inst.IE1
+negL0 => ALP74LS173:inst.IE2
+negL0 => ALP74LS173:inst2.IE1
+negL0 => ALP74LS173:inst2.IE2
+CLK => ALP74LS173:inst.CP
+CLK => ALP74LS173:inst2.CP
+Q1 <= ALP74LS173:inst.Q1
+Q2 <= ALP74LS173:inst.Q2
+Q3 <= ALP74LS173:inst.Q3
+Q4 <= ALP74LS173:inst2.Q0
+D4 => ALP74LS173:inst2.D0
+D5 => ALP74LS173:inst2.D1
+D6 => ALP74LS173:inst2.D2
+D7 => ALP74LS173:inst2.D3
+Q5 <= ALP74LS173:inst2.Q1
+Q6 <= ALP74LS173:inst2.Q2
+Q7 <= ALP74LS173:inst2.Q3
+
+
+|RegistradorSaida|ALP74LS173:inst
+Q0 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+MR => inst1.IN0
+CP => inst20.CLK
+CP => inst21.CLK
+CP => inst22.CLK
+CP => inst23.CLK
+IE1 => inst.IN0
+IE2 => inst.IN1
+D0 => inst13.IN1
+OE1 => inst18.IN0
+OE2 => inst18.IN1
+Q1 <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst10.IN1
+Q2 <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst7.IN1
+Q3 <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst3.IN1
+
+
+|RegistradorSaida|ALP74LS173:inst2
+Q0 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+MR => inst1.IN0
+CP => inst20.CLK
+CP => inst21.CLK
+CP => inst22.CLK
+CP => inst23.CLK
+IE1 => inst.IN0
+IE2 => inst.IN1
+D0 => inst13.IN1
+OE1 => inst18.IN0
+OE2 => inst18.IN1
+Q1 <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst10.IN1
+Q2 <= inst26.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst7.IN1
+Q3 <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst3.IN1
+
+
