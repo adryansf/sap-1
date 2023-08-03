@@ -1,5 +1,5 @@
 Flow report for RI
-Tue Aug 01 21:23:49 2023
+Thu Aug 03 01:00:07 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Aug 01 21:23:49 2023       ;
+; Flow Status                        ; Successful - Thu Aug 03 01:00:07 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; RI                                          ;
 ; Top-level Entity Name              ; RI                                          ;
@@ -103,6 +103,8 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4639 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4627 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4639 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4626 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4639 MB             ; 00:00:00                           ;
 ; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
@@ -120,6 +122,8 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; DESKTOP-78HHM8J  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-78HHM8J  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-78HHM8J  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-78HHM8J  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-78HHM8J  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -130,6 +134,8 @@ quartus_map --read_settings_files=on --write_settings_files=off RI -c RI
 quartus_fit --read_settings_files=off --write_settings_files=off RI -c RI
 quartus_asm --read_settings_files=off --write_settings_files=off RI -c RI
 quartus_sta RI -c RI
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off RI -c RI --vector_source=D:/Projetos_Quartus/Capivarias/RI/Waveform.vwf --testbench_file=D:/Projetos_Quartus/Capivarias/RI/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/Projetos_Quartus/Capivarias/RI/simulation/qsim/ RI -c RI
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off RI -c RI --vector_source=D:/Projetos_Quartus/Capivarias/RI/Waveform.vwf --testbench_file=D:/Projetos_Quartus/Capivarias/RI/simulation/qsim/Waveform.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/Projetos_Quartus/Capivarias/RI/simulation/qsim/ RI -c RI
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off RI -c RI --vector_source=D:/Projetos_Quartus/Capivarias/RI/Waveform.vwf --testbench_file=D:/Projetos_Quartus/Capivarias/RI/simulation/qsim/Waveform.vwf.vt

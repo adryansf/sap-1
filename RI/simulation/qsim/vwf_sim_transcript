@@ -26,7 +26,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Aug 01 21:23:47 2023
+    Info: Processing started: Thu Aug 03 01:00:06 2023
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off RI -c RI --vector_source=D:/Projetos_Quartus/Capivarias/RI/Waveform.vwf --testbench_file=D:/Projetos_Quartus/Capivarias/RI/simulation/qsim/Waveform.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -55,15 +55,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Aug 01 21:23:48 2023
+    Info: Processing started: Thu Aug 03 01:00:07 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/Projetos_Quartus/Capivarias/RI/simulation/qsim/ RI -c RI
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file RI.vo in folder "D:/Projetos_Quartus/Capivarias/RI/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4639 megabytes
-    Info: Processing ended: Tue Aug 01 21:23:49 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Thu Aug 03 01:00:07 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -81,33 +81,32 @@ Reading pref.tcl
 
 # 2020.1
 
-
 # do RI.do
-# ** Warning: (vlib-34) Library already exists at "work".
 
+# ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:23:49 on Aug 01,2023
+# Start time: 01:00:08 on Aug 03,2023
 # vlog -work work RI.vo 
+
 # -- Compiling module RI
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	RI
-# End time: 21:23:49 on Aug 01,2023, Elapsed time: 0:00:00
+# End time: 01:00:08 on Aug 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:23:49 on Aug 01,2023
+# Start time: 01:00:08 on Aug 03,2023
 # vlog -work work Waveform.vwf.vt 
-
 # -- Compiling module RI_vlg_vec_tst
 # 
 # Top level modules:
 # 	RI_vlg_vec_tst
-# End time: 21:23:50 on Aug 01,2023, Elapsed time: 0:00:01
+# End time: 01:00:08 on Aug 03,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.RI_vlg_vec_tst 
-# Start time: 21:23:50 on Aug 01,2023
+# Start time: 01:00:08 on Aug 03,2023
 # Loading work.RI_vlg_vec_tst
 # Loading work.RI
 # Loading work.hard_block
@@ -127,7 +126,7 @@ Reading pref.tcl
 # after#26
 # ** Note: $finish    : Waveform.vwf.vt(81)
 #    Time: 1 us  Iteration: 0  Instance: /RI_vlg_vec_tst
-# End time: 21:23:50 on Aug 01,2023, Elapsed time: 0:00:00
+# End time: 01:00:09 on Aug 03,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 2
 
 Completed successfully. 
@@ -140,7 +139,7 @@ Reading D:/Projetos_Quartus/Capivarias/RI/simulation/qsim/RI.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/Projetos_Quartus/Capivarias/RI/simulation/qsim/RI_20230801212350.sim.vwf
+Writing the resulting VWF to D:/Projetos_Quartus/Capivarias/RI/simulation/qsim/RI_20230803010009.sim.vwf
 
 Finished VCD to VWF conversion.
 

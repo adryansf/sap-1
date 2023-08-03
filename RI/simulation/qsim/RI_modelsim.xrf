@@ -1,6 +1,7 @@
 vendor_name = ModelSim
 source_file = 1, D:/Projetos_Quartus/Capivarias/RI/RI.bsf
 source_file = 1, D:/Projetos_Quartus/Capivarias/RI/RI.bdf
+source_file = 1, D:/Projetos_Quartus/Capivarias/RI/Waveform.vwf
 source_file = 1, D:/Projetos_Quartus/Capivarias/RI/alp74ls173.bdf
 design_name = RI
 instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, RI, 1
