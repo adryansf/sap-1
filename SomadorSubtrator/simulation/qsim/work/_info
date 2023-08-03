@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/componentes-quartus-sap1/sap-1/SomadorSubtrator/simulation/qsim
+vSomadorSubtrator
+Z1 !s110 1691029980
+!i10b 1
+!s100 ZC6NRIFhTdk1SJSJ76az50
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IB[HU_kB:QKNnnhXzMinoD2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1691029979
+8SomadorSubtrator.vo
+FSomadorSubtrator.vo
+!i122 32
+L0 32 971
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1691029980.000000
+!s107 SomadorSubtrator.vo|
+!s90 -work|work|SomadorSubtrator.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@somador@subtrator
+vSomadorSubtrator_vlg_vec_tst
+R1
+!i10b 1
+!s100 7PaBjQ=P>S2D6Vl<[kMJN2
+R2
+IO^OH2n5Iabzg]1N1?EJNg2
+R3
+R0
+w1691029978
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 33
+L0 30 433
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R6
+R7
+n@somador@subtrator_vlg_vec_tst
