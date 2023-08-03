@@ -1,5 +1,7 @@
 vendor_name = ModelSim
+source_file = 1, D:/componentes-quartus-sap1/sap-1/SomadorSubtrator/SomadorSubtrator.bsf
 source_file = 1, D:/componentes-quartus-sap1/sap-1/SomadorSubtrator/SomadorSubtrator.bdf
+source_file = 1, D:/componentes-quartus-sap1/sap-1/SomadorSubtrator/Waveform.vwf
 source_file = 1, D:/componentes-quartus-sap1/sap-1/SomadorSubtrator/alp74ls83.bdf
 design_name = SomadorSubtrator
 instance = comp, \S0~output , S0~output, SomadorSubtrator, 1
