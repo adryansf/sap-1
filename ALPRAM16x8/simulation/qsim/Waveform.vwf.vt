@@ -1,0 +1,240 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "08/02/2023 02:45:10"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          ALPRAM16x8
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module ALPRAM16x8_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg A;
+reg A0;
+reg A1;
+reg A2;
+reg A3;
+reg A4;
+reg A5;
+reg A6;
+reg A7;
+reg B;
+reg C;
+reg CLK;
+reg D;
+reg nCE;
+reg WRITE3;
+// wires                                               
+wire S0;
+wire S1;
+wire S2;
+wire S3;
+wire S4;
+wire S5;
+wire S6;
+wire S7;
+
+// assign statements (if any)                          
+ALPRAM16x8 i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.A0(A0),
+	.A1(A1),
+	.A2(A2),
+	.A3(A3),
+	.A4(A4),
+	.A5(A5),
+	.A6(A6),
+	.A7(A7),
+	.B(B),
+	.C(C),
+	.CLK(CLK),
+	.D(D),
+	.nCE(nCE),
+	.S0(S0),
+	.S1(S1),
+	.S2(S2),
+	.S3(S3),
+	.S4(S4),
+	.S5(S5),
+	.S6(S6),
+	.S7(S7),
+	.WRITE3(WRITE3)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// A
+initial
+begin
+	repeat(16)
+	begin
+		A = 1'b0;
+		A = #30000 1'b1;
+		# 30000;
+	end
+	A = 1'b0;
+	A = #30000 1'b1;
+end 
+
+// B
+initial
+begin
+	repeat(33)
+	begin
+		B = 1'b0;
+		B = #15000 1'b1;
+		# 15000;
+	end
+	B = 1'b0;
+end 
+
+// C
+initial
+begin
+	C = 1'b0;
+end 
+
+// D
+initial
+begin
+	D = 1'b0;
+end 
+
+// A0
+initial
+begin
+	A0 = 1'b0;
+end 
+
+// A1
+initial
+begin
+	A1 = 1'b0;
+end 
+
+// A2
+initial
+begin
+	A2 = 1'b0;
+	A2 = #640000 1'b1;
+end 
+
+// A3
+initial
+begin
+	A3 = 1'b0;
+	A3 = #320000 1'b1;
+	A3 = #320000 1'b0;
+	A3 = #320000 1'b1;
+end 
+
+// A4
+initial
+begin
+	repeat(3)
+	begin
+		A4 = 1'b0;
+		A4 = #160000 1'b1;
+		# 160000;
+	end
+	A4 = 1'b0;
+end 
+
+// A5
+initial
+begin
+	repeat(6)
+	begin
+		A5 = 1'b0;
+		A5 = #80000 1'b1;
+		# 80000;
+	end
+	A5 = 1'b0;
+end 
+
+// A6
+initial
+begin
+	repeat(12)
+	begin
+		A6 = 1'b0;
+		A6 = #40000 1'b1;
+		# 40000;
+	end
+	A6 = 1'b0;
+end 
+
+// A7
+always
+begin
+	A7 = 1'b0;
+	A7 = #20000 1'b1;
+	#20000;
+end 
+
+// nCE
+initial
+begin
+	nCE = 1'b0;
+end 
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #2500 1'b1;
+	#2500;
+end 
+
+// WRITE3
+initial
+begin
+	WRITE3 = 1'b1;
+	# 10000;
+	repeat(3)
+	begin
+		WRITE3 = 1'b0;
+		WRITE3 = #10000 1'b1;
+		# 10000;
+	end
+	WRITE3 = 1'b0;
+	WRITE3 = #10000 1'b1;
+	WRITE3 = #50000 1'b0;
+	WRITE3 = #10000 1'b1;
+	WRITE3 = #70000 1'b0;
+	WRITE3 = #10000 1'b1;
+	# 10000;
+	repeat(38)
+	begin
+		WRITE3 = 1'b0;
+		WRITE3 = #10000 1'b1;
+		# 10000;
+	end
+	WRITE3 = 1'b0;
+end 
+endmodule
+
