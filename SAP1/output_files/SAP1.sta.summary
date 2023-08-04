@@ -3,35 +3,35 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLKMANUAL'
-Slack : -11.824
-TNS   : -390.413
-
-Type  : Slow 1200mV 85C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst4|inst'
-Slack : -5.935
-TNS   : -5.935
+Slack : -12.421
+TNS   : -380.559
 
 Type  : Slow 1200mV 85C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst3|inst'
-Slack : -5.679
-TNS   : -5.679
+Slack : -5.623
+TNS   : -5.623
 
 Type  : Slow 1200mV 85C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst|inst'
-Slack : -5.498
-TNS   : -5.498
+Slack : -5.448
+TNS   : -5.448
+
+Type  : Slow 1200mV 85C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst4|inst'
+Slack : -5.306
+TNS   : -5.306
 
 Type  : Slow 1200mV 85C Model Setup 'CLKAUTO'
-Slack : -4.409
-TNS   : -4.409
-
-Type  : Slow 1200mV 85C Model Hold 'CLKMANUAL'
-Slack : -1.511
-TNS   : -3.257
+Slack : -4.490
+TNS   : -4.490
 
 Type  : Slow 1200mV 85C Model Hold 'ContadorDePrograma:inst|ALP74LS107:inst4|inst'
 Slack : 0.412
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Hold 'CLKMANUAL'
+Slack : 0.503
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Hold 'ContadorDePrograma:inst|ALP74LS107:inst|inst'
-Slack : 0.685
+Slack : 0.537
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'ContadorDePrograma:inst|ALP74LS107:inst3|inst'
@@ -39,12 +39,16 @@ Slack : 0.698
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLKAUTO'
-Slack : 4.422
+Slack : 4.346
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLKMANUAL'
 Slack : -3.000
-TNS   : -257.688
+TNS   : -257.823
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'A'
+Slack : -3.000
+TNS   : -196.718
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLKAUTO'
 Slack : -3.000
@@ -63,48 +67,52 @@ Slack : -1.487
 TNS   : -1.487
 
 Type  : Slow 1200mV 0C Model Setup 'CLKMANUAL'
-Slack : -11.185
-TNS   : -366.841
-
-Type  : Slow 1200mV 0C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst4|inst'
-Slack : -5.451
-TNS   : -5.451
+Slack : -11.737
+TNS   : -361.843
 
 Type  : Slow 1200mV 0C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst3|inst'
-Slack : -5.207
-TNS   : -5.207
+Slack : -5.151
+TNS   : -5.151
 
 Type  : Slow 1200mV 0C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst|inst'
-Slack : -5.003
-TNS   : -5.003
+Slack : -4.959
+TNS   : -4.959
+
+Type  : Slow 1200mV 0C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst4|inst'
+Slack : -4.845
+TNS   : -4.845
 
 Type  : Slow 1200mV 0C Model Setup 'CLKAUTO'
-Slack : -3.909
-TNS   : -3.909
-
-Type  : Slow 1200mV 0C Model Hold 'CLKMANUAL'
-Slack : -1.370
-TNS   : -2.814
+Slack : -4.053
+TNS   : -4.053
 
 Type  : Slow 1200mV 0C Model Hold 'ContadorDePrograma:inst|ALP74LS107:inst4|inst'
 Slack : 0.368
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'CLKMANUAL'
+Slack : 0.387
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Hold 'ContadorDePrograma:inst|ALP74LS107:inst|inst'
-Slack : 0.642
+Slack : 0.494
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ContadorDePrograma:inst|ALP74LS107:inst3|inst'
-Slack : 0.668
+Slack : 0.665
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLKAUTO'
-Slack : 3.991
+Slack : 3.902
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLKMANUAL'
 Slack : -3.000
-TNS   : -267.263
+TNS   : -265.478
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'A'
+Slack : -3.000
+TNS   : -220.344
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLKAUTO'
 Slack : -3.000
@@ -123,52 +131,56 @@ Slack : -1.487
 TNS   : -1.487
 
 Type  : Fast 1200mV 0C Model Setup 'CLKMANUAL'
-Slack : -4.157
-TNS   : -129.885
-
-Type  : Fast 1200mV 0C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst4|inst'
-Slack : -1.826
-TNS   : -1.826
+Slack : -4.420
+TNS   : -126.914
 
 Type  : Fast 1200mV 0C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst3|inst'
-Slack : -1.732
-TNS   : -1.732
+Slack : -1.728
+TNS   : -1.728
 
 Type  : Fast 1200mV 0C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst|inst'
-Slack : -1.658
-TNS   : -1.658
+Slack : -1.650
+TNS   : -1.650
+
+Type  : Fast 1200mV 0C Model Setup 'ContadorDePrograma:inst|ALP74LS107:inst4|inst'
+Slack : -1.602
+TNS   : -1.602
 
 Type  : Fast 1200mV 0C Model Setup 'CLKAUTO'
-Slack : -1.306
-TNS   : -1.306
+Slack : -1.357
+TNS   : -1.357
 
-Type  : Fast 1200mV 0C Model Hold 'CLKMANUAL'
-Slack : -0.767
-TNS   : -2.027
+Type  : Fast 1200mV 0C Model Hold 'ContadorDePrograma:inst|ALP74LS107:inst|inst'
+Slack : 0.157
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ContadorDePrograma:inst|ALP74LS107:inst4|inst'
 Slack : 0.170
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'ContadorDePrograma:inst|ALP74LS107:inst|inst'
-Slack : 0.207
+Type  : Fast 1200mV 0C Model Hold 'CLKMANUAL'
+Slack : 0.171
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ContadorDePrograma:inst|ALP74LS107:inst3|inst'
-Slack : 0.208
+Slack : 0.200
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLKAUTO'
-Slack : 1.810
+Slack : 1.777
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLKMANUAL'
 Slack : -3.000
-TNS   : -174.046
+TNS   : -174.072
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'A'
+Slack : -3.000
+TNS   : -148.865
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLKAUTO'
 Slack : -3.000
-TNS   : -4.071
+TNS   : -4.069
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ContadorDePrograma:inst|ALP74LS107:inst3|inst'
 Slack : -1.000

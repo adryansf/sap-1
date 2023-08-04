@@ -43,6 +43,13 @@ DISPLAY5 <= RegistradorSaida:inst11.Q5
 DISPLAY6 <= RegistradorSaida:inst11.Q6
 DISPLAY7 <= RegistradorSaida:inst11.Q7
 SIGNAL_NEI <= NEI.DB_MAX_OUTPUT_PORT_TYPE
+O7 <= gdfx_temp0.DB_MAX_OUTPUT_PORT_TYPE
+O1 <= gdfx_temp1.DB_MAX_OUTPUT_PORT_TYPE
+O2 <= gdfx_temp2.DB_MAX_OUTPUT_PORT_TYPE
+O4 <= gdfx_temp3.DB_MAX_OUTPUT_PORT_TYPE
+O3 <= gdfx_temp4.DB_MAX_OUTPUT_PORT_TYPE
+O5 <= gdfx_temp5.DB_MAX_OUTPUT_PORT_TYPE
+O6 <= gdfx_temp6.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SAP1|ControladorSequencializador:inst3

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SAP1
-Thu Aug 03 16:09:32 2023
+Thu Aug 03 22:05:16 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,10 +14,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +43,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Aug 03 16:09:32 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Aug 03 22:05:16 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; SAP1                                        ;
 ; Top-level Entity Name              ; SAP1                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 524                                         ;
-;     Total combinational functions  ; 364                                         ;
+; Total logic elements               ; 380                                         ;
+;     Total combinational functions  ; 220                                         ;
 ;     Dedicated logic registers      ; 175                                         ;
 ; Total registers                    ; 175                                         ;
-; Total pins                         ; 41                                          ;
+; Total pins                         ; 48                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -197,30 +196,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 524    ;
+; Estimated Total logic elements              ; 380    ;
 ;                                             ;        ;
-; Total combinational functions               ; 364    ;
+; Total combinational functions               ; 220    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 287    ;
-;     -- 3 input functions                    ; 40     ;
-;     -- <=2 input functions                  ; 37     ;
+;     -- 4 input functions                    ; 145    ;
+;     -- 3 input functions                    ; 55     ;
+;     -- <=2 input functions                  ; 20     ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 364    ;
+;     -- normal mode                          ; 220    ;
 ;     -- arithmetic mode                      ; 0      ;
 ;                                             ;        ;
 ; Total registers                             ; 175    ;
 ;     -- Dedicated logic registers            ; 175    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 41     ;
+; I/O pins                                    ; 48     ;
 ;                                             ;        ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ;                                             ;        ;
 ; Maximum fan-out node                        ; inst29 ;
-; Maximum fan-out                             ; 74     ;
-; Total fan-out                               ; 1803   ;
-; Average fan-out                             ; 2.90   ;
+; Maximum fan-out                             ; 53     ;
+; Total fan-out                               ; 1267   ;
+; Average fan-out                             ; 2.58   ;
 +---------------------------------------------+--------+
 
 
@@ -229,9 +228,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                      ; Entity Name                 ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+-----------------------------+--------------+
-; |SAP1                                  ; 364 (298)           ; 175 (1)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |SAP1                                                    ; SAP1                        ; work         ;
+; |SAP1                                  ; 220 (2)             ; 175 (1)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 48   ; 0            ; 0          ; |SAP1                                                    ; SAP1                        ; work         ;
 ;    |ALP74LS157:inst5|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALP74LS157:inst5                                   ; ALP74LS157                  ; work         ;
-;    |ALPRAM16x8:inst10|                 ; 18 (18)             ; 128 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10                                  ; ALPRAM16x8                  ; work         ;
+;    |ALPRAM16x8:inst10|                 ; 44 (40)             ; 128 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10                                  ; ALPRAM16x8                  ; work         ;
 ;       |ALP174xx374:inst10|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst10               ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst11|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst11               ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst12|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst12               ; ALP174xx374                 ; work         ;
@@ -239,20 +238,21 @@ https://fpgasoftware.intel.com/eula.
 ;       |ALP174xx374:inst14|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst14               ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst15|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst15               ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst16|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst16               ; ALP174xx374                 ; work         ;
-;       |ALP174xx374:inst17|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst17               ; ALP174xx374                 ; work         ;
+;       |ALP174xx374:inst17|             ; 1 (1)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst17               ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst18|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst18               ; ALP174xx374                 ; work         ;
-;       |ALP174xx374:inst19|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst19               ; ALP174xx374                 ; work         ;
+;       |ALP174xx374:inst19|             ; 3 (3)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst19               ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst5|              ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst5                ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst6|              ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst6                ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst7|              ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst7                ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst8|              ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst8                ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst9|              ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst9                ; ALP174xx374                 ; work         ;
 ;       |ALP174xx374:inst|               ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALPRAM16x8:inst10|ALP174xx374:inst                 ; ALP174xx374                 ; work         ;
-;    |ContadorDePrograma:inst|           ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst                            ; ContadorDePrograma          ; work         ;
+;    |ContadorDePrograma:inst|           ; 63 (0)              ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst                            ; ContadorDePrograma          ; work         ;
 ;       |ALP74LS107:inst3|               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst|ALP74LS107:inst3           ; ALP74LS107                  ; work         ;
 ;       |ALP74LS107:inst4|               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst|ALP74LS107:inst4           ; ALP74LS107                  ; work         ;
 ;       |ALP74LS107:inst5|               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst|ALP74LS107:inst5           ; ALP74LS107                  ; work         ;
 ;       |ALP74LS107:inst|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst|ALP74LS107:inst            ; ALP74LS107                  ; work         ;
+;       |ALP74LS126:inst2|               ; 59 (59)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst|ALP74LS126:inst2           ; ALP74LS126                  ; work         ;
 ;    |ControladorSequencializador:inst3| ; 16 (14)             ; 6 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ControladorSequencializador:inst3                  ; ControladorSequencializador ; work         ;
 ;       |ALP74LS107:inst3|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ControladorSequencializador:inst3|ALP74LS107:inst3 ; ALP74LS107                  ; work         ;
 ;       |ALP74LS107:inst4|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ControladorSequencializador:inst3|ALP74LS107:inst4 ; ALP74LS107                  ; work         ;
@@ -271,8 +271,8 @@ https://fpgasoftware.intel.com/eula.
 ;    |RegistradorSaida:inst11|           ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RegistradorSaida:inst11                            ; RegistradorSaida            ; work         ;
 ;       |ALP74LS173:inst2|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RegistradorSaida:inst11|ALP74LS173:inst2           ; ALP74LS173                  ; work         ;
 ;       |ALP74LS173:inst|                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RegistradorSaida:inst11|ALP74LS173:inst            ; ALP74LS173                  ; work         ;
-;    |SomadorSubtrator:inst6|            ; 24 (2)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|SomadorSubtrator:inst6                             ; SomadorSubtrator            ; work         ;
-;       |ALP74LS83:inst18|               ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|SomadorSubtrator:inst6|ALP74LS83:inst18            ; ALP74LS83                   ; work         ;
+;    |SomadorSubtrator:inst6|            ; 91 (67)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|SomadorSubtrator:inst6                             ; SomadorSubtrator            ; work         ;
+;       |ALP74LS83:inst18|               ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|SomadorSubtrator:inst6|ALP74LS83:inst18            ; ALP74LS83                   ; work         ;
 ;       |ALP74LS83:inst2|                ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|SomadorSubtrator:inst6|ALP74LS83:inst2             ; ALP74LS83                   ; work         ;
 ;    |acumulador:inst100|                ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|acumulador:inst100                                 ; acumulador                  ; work         ;
 ;       |ALP74LS173:inst1|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|acumulador:inst100|ALP74LS173:inst1                ; ALP74LS173                  ; work         ;
@@ -296,36 +296,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 129:1              ; 3 bits    ; 258 LEs       ; 36 LEs               ; 222 LEs                ; No         ; |SAP1|gdfx_temp3           ;
-; 512:1              ; 3 bits    ; 1023 LEs      ; 36 LEs               ; 987 LEs                ; No         ; |SAP1|gdfx_temp4           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 41                          ;
+; boundary_port         ; 48                          ;
 ; cycloneiii_ff         ; 175                         ;
 ;     CLR               ; 6                           ;
 ;     ENA               ; 32                          ;
 ;     ENA CLR           ; 8                           ;
 ;     plain             ; 129                         ;
-; cycloneiii_lcell_comb ; 371                         ;
-;     normal            ; 371                         ;
+; cycloneiii_io_obuf    ; 7                           ;
+; cycloneiii_lcell_comb ; 227                         ;
+;     normal            ; 227                         ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 30                          ;
-;         3 data inputs ; 40                          ;
-;         4 data inputs ; 287                         ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 55                          ;
+;         4 data inputs ; 145                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 6.68                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 5.30                        ;
 +-----------------------+-----------------------------+
 
 
@@ -334,7 +325,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:54     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -344,7 +335,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Aug 03 16:08:18 2023
+    Info: Processing started: Thu Aug 03 22:04:59 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAP1 -c SAP1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -420,14 +411,6 @@ Info (12128): Elaborating entity "RegistradorSaida" for hierarchy "RegistradorSa
 Info (13014): Ignored 1 buffer(s)
     Info (13019): Ignored 1 SOFT buffer(s)
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13048): Converted tri-state node "gdfx_temp0" into a selector
-    Warning (13048): Converted tri-state node "gdfx_temp7" into a selector
-    Warning (13048): Converted tri-state node "gdfx_temp1" into a selector
-    Warning (13048): Converted tri-state node "gdfx_temp2" into a selector
-    Warning (13048): Converted tri-state node "gdfx_temp3" into a selector
-    Warning (13048): Converted tri-state node "gdfx_temp6" into a selector
-    Warning (13048): Converted tri-state node "gdfx_temp5" into a selector
-    Warning (13048): Converted tri-state node "gdfx_temp4" into a selector
     Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst2|inst17" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst2|inst19" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst2|inst26" feeding internal logic into a wire
@@ -440,14 +423,6 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "REM:inst4|ALP74LS173:inst|inst19" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "REM:inst4|ALP74LS173:inst|inst26" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "REM:inst4|ALP74LS173:inst|inst28" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst17" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst19" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst26" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst28" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst17" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst19" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst26" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst28" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "RI:inst1|ALP74LS173:inst1|inst17" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "RI:inst1|ALP74LS173:inst1|inst19" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "RI:inst1|ALP74LS173:inst1|inst26" feeding internal logic into a wire
@@ -466,17 +441,35 @@ Warning (13044): Always-enabled tri-state buffer(s) removed
     Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst2|inst19" to the node "DISPLAY5" into a wire
     Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst2|inst26" to the node "DISPLAY6" into a wire
     Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst2|inst28" to the node "DISPLAY7" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst28" to the node "SomadorSubtrator:inst6|ALP74LS83:inst18|45" into a wire
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst26" to the node "SomadorSubtrator:inst6|ALP74LS83:inst18|21" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst19" to the node "SomadorSubtrator:inst6|ALP74LS83:inst18|20" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst17" to the node "SomadorSubtrator:inst6|ALP74LS83:inst18|19" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst28" to the node "SomadorSubtrator:inst6|ALP74LS83:inst2|22" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst26" to the node "SomadorSubtrator:inst6|ALP74LS83:inst2|21" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst19" to the node "SomadorSubtrator:inst6|ALP74LS83:inst2|20" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst17" to the node "SomadorSubtrator:inst6|ALP74LS83:inst2|19" into an OR gate
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "SomadorSubtrator:inst6|inst15" to the node "RegistradorSaida:inst11|ALP74LS173:inst2|inst21" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "SomadorSubtrator:inst6|inst17" to the node "RegistradorSaida:inst11|ALP74LS173:inst2|inst23" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ContadorDePrograma:inst|ALP74LS126:inst2|inst" to the node "RegistradorSaida:inst11|ALP74LS173:inst|inst20" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ContadorDePrograma:inst|ALP74LS126:inst2|inst2" to the node "RegistradorSaida:inst11|ALP74LS173:inst|inst21" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ContadorDePrograma:inst|ALP74LS126:inst2|inst4" to the node "RegistradorSaida:inst11|ALP74LS173:inst|inst23" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ContadorDePrograma:inst|ALP74LS126:inst2|inst3" to the node "RegistradorSaida:inst11|ALP74LS173:inst|inst22" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "SomadorSubtrator:inst6|inst14" to the node "RegistradorSaida:inst11|ALP74LS173:inst2|inst20" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "SomadorSubtrator:inst6|inst16" to the node "RegistradorSaida:inst11|ALP74LS173:inst2|inst22" into an OR gate
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 573 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 436 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 532 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 4878 megabytes
-    Info: Processing ended: Thu Aug 03 16:09:32 2023
-    Info: Elapsed time: 00:01:14
-    Info: Total CPU time (on all processors): 00:01:30
+    Info (21059): Implemented 30 output pins
+    Info (21061): Implemented 388 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 82 warnings
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Thu Aug 03 22:05:16 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:38
 
 

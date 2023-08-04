@@ -96,6 +96,34 @@
 					"strict" : false
 				},
 				{
+					"name" : "O7",
+					"strict" : false
+				},
+				{
+					"name" : "O1",
+					"strict" : false
+				},
+				{
+					"name" : "O2",
+					"strict" : false
+				},
+				{
+					"name" : "O4",
+					"strict" : false
+				},
+				{
+					"name" : "O3",
+					"strict" : false
+				},
+				{
+					"name" : "O5",
+					"strict" : false
+				},
+				{
+					"name" : "O6",
+					"strict" : false
+				},
+				{
 					"name" : "ENCLOCKAUTO",
 					"strict" : false
 				},
@@ -116,15 +144,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "C",
-					"strict" : false
-				},
-				{
 					"name" : "D",
 					"strict" : false
 				},
 				{
 					"name" : "A",
+					"strict" : false
+				},
+				{
+					"name" : "C",
 					"strict" : false
 				},
 				{
