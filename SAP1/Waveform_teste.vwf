@@ -24,6 +24,7 @@ quit -f
 
 
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -42,6 +43,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 
 
@@ -364,21 +366,6 @@ SIGNAL("WRITE")
 	PARENT = "";
 }
 
-GROUP("ADDRESS")
-{
-	MEMBERS = "D", "C", "B", "A";
-}
-
-GROUP("DATA")
-{
-	MEMBERS = "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7";
-}
-
-GROUP("OUTPUT")
-{
-	MEMBERS = "DISPLAY0", "DISPLAY1", "DISPLAY2", "DISPLAY3", "DISPLAY4", "DISPLAY5", "DISPLAY6", "DISPLAY7";
-}
-
 SIGNAL("O1")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -449,9 +436,84 @@ SIGNAL("O7")
 	PARENT = "";
 }
 
+GROUP("ADDRESS")
+{
+	MEMBERS = "D", "C", "B", "A";
+}
+
+GROUP("DATA")
+{
+	MEMBERS = "D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7";
+}
+
+GROUP("OUTPUT")
+{
+	MEMBERS = "DISPLAY0", "DISPLAY1", "DISPLAY2", "DISPLAY3", "DISPLAY4", "DISPLAY5", "DISPLAY6", "DISPLAY7";
+}
+
 GROUP("BARRAMENTO")
 {
 	MEMBERS = "O1", "O2", "O3", "O4", "O5", "O6", "O7";
+}
+
+SIGNAL("ControladorSequencializador:inst3|ALP74LS107:inst|inst")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("ControladorSequencializador:inst3|ALP74LS107:inst3|inst")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("ControladorSequencializador:inst3|ALP74LS107:inst4|inst")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("ControladorSequencializador:inst3|ALP74LS107:inst5|inst")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("ControladorSequencializador:inst3|ALP74LS107:inst6|inst")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("ControladorSequencializador:inst3|ALP74LS107:inst7|inst")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
 }
 
 TRANSITION_LIST("A")
@@ -809,10 +871,64 @@ TRANSITION_LIST("O7")
 	}
 }
 
+TRANSITION_LIST("ControladorSequencializador:inst3|ALP74LS107:inst|inst")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ControladorSequencializador:inst3|ALP74LS107:inst3|inst")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ControladorSequencializador:inst3|ALP74LS107:inst4|inst")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ControladorSequencializador:inst3|ALP74LS107:inst5|inst")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ControladorSequencializador:inst3|ALP74LS107:inst6|inst")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ControladorSequencializador:inst3|ALP74LS107:inst7|inst")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 1000.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "ADDRESS";
-	EXPAND_STATUS = EXPANDED;
+	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
@@ -862,7 +978,7 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "BARRAMENTO";
-	EXPAND_STATUS = EXPANDED;
+	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
 	TREE_LEVEL = 0;
@@ -942,7 +1058,7 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "DATA";
-	EXPAND_STATUS = EXPANDED;
+	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 13;
 	TREE_LEVEL = 0;
@@ -1104,7 +1220,7 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "OUTPUT";
-	EXPAND_STATUS = EXPANDED;
+	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 30;
 	TREE_LEVEL = 0;
@@ -1189,6 +1305,60 @@ DISPLAY_LINE
 	TREE_INDEX = 38;
 	TREE_LEVEL = 1;
 	PARENT = 30;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ControladorSequencializador:inst3|ALP74LS107:inst|inst";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 39;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ControladorSequencializador:inst3|ALP74LS107:inst3|inst";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 40;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ControladorSequencializador:inst3|ALP74LS107:inst4|inst";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 41;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ControladorSequencializador:inst3|ALP74LS107:inst5|inst";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 42;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ControladorSequencializador:inst3|ALP74LS107:inst6|inst";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 43;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ControladorSequencializador:inst3|ALP74LS107:inst7|inst";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 44;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

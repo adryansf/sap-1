@@ -124,19 +124,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "ENCLOCKAUTO",
+					"name" : "O8",
 					"strict" : false
 				},
 				{
-					"name" : "CLKMANUAL",
+					"name" : "CLR_O",
 					"strict" : false
 				},
 				{
-					"name" : "CLEAR",
+					"name" : "NCLR_O",
 					"strict" : false
 				},
 				{
-					"name" : "B",
+					"name" : "Limpar_Iniciar",
+					"strict" : false
+				},
+				{
+					"name" : "Etapa_Unica",
+					"strict" : false
+				},
+				{
+					"name" : "Manual_Automatico",
+					"strict" : false
+				},
+				{
+					"name" : "C",
 					"strict" : false
 				},
 				{
@@ -144,7 +156,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "D",
+					"name" : "B",
 					"strict" : false
 				},
 				{
@@ -152,7 +164,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "C",
+					"name" : "D",
 					"strict" : false
 				},
 				{

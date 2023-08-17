@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/03/2023 21:45:15"
+// Generated on "08/16/2023 14:18:35"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          SAP1
 // 
@@ -33,9 +33,7 @@ module SAP1_vlg_vec_tst();
 reg A;
 reg B;
 reg C;
-reg CLEAR;
 reg CLKAUTO;
-reg CLKMANUAL;
 reg D;
 reg D0;
 reg D1;
@@ -46,10 +44,13 @@ reg D5;
 reg D6;
 reg D7;
 reg ENAUTOADDRESS;
-reg ENCLOCKAUTO;
+reg Etapa_Unica;
+reg Limpar_Iniciar;
+reg Manual_Automatico;
 reg WRITE;
 // wires                                               
 wire CLK;
+wire CLR_O;
 wire DISPLAY0;
 wire DISPLAY1;
 wire DISPLAY2;
@@ -59,6 +60,15 @@ wire DISPLAY5;
 wire DISPLAY6;
 wire DISPLAY7;
 wire NCLK;
+wire NCLR_O;
+wire O1;
+wire O2;
+wire O3;
+wire O4;
+wire O5;
+wire O6;
+wire O7;
+wire O8;
 wire SIGNAL_CP;
 wire SIGNAL_EA;
 wire SIGNAL_EP;
@@ -79,10 +89,9 @@ SAP1 i1 (
 	.A(A),
 	.B(B),
 	.C(C),
-	.CLEAR(CLEAR),
 	.CLK(CLK),
 	.CLKAUTO(CLKAUTO),
-	.CLKMANUAL(CLKMANUAL),
+	.CLR_O(CLR_O),
 	.D(D),
 	.D0(D0),
 	.D1(D1),
@@ -101,8 +110,19 @@ SAP1 i1 (
 	.DISPLAY6(DISPLAY6),
 	.DISPLAY7(DISPLAY7),
 	.ENAUTOADDRESS(ENAUTOADDRESS),
-	.ENCLOCKAUTO(ENCLOCKAUTO),
+	.Etapa_Unica(Etapa_Unica),
+	.Limpar_Iniciar(Limpar_Iniciar),
+	.Manual_Automatico(Manual_Automatico),
 	.NCLK(NCLK),
+	.NCLR_O(NCLR_O),
+	.O1(O1),
+	.O2(O2),
+	.O3(O3),
+	.O4(O4),
+	.O5(O5),
+	.O6(O6),
+	.O7(O7),
+	.O8(O8),
 	.SIGNAL_CP(SIGNAL_CP),
 	.SIGNAL_EA(SIGNAL_EA),
 	.SIGNAL_EP(SIGNAL_EP),
@@ -257,46 +277,51 @@ end
 always
 begin
 	CLKAUTO = 1'b0;
-	CLKAUTO = #5000 1'b1;
-	#5000;
-end 
-
-// CLKMANUAL
-always
-begin
-	CLKMANUAL = 1'b0;
-	CLKMANUAL = #5000 1'b1;
-	#5000;
-end 
-
-// CLEAR
-initial
-begin
-	CLEAR = 1'b1;
-	CLEAR = #20000 1'b0;
-	CLEAR = #150000 1'b1;
-	CLEAR = #20000 1'b0;
+	CLKAUTO = #4000 1'b1;
+	#4000;
 end 
 
 // WRITE
 initial
 begin
-	WRITE = 1'b1;
-	WRITE = #150000 1'b0;
+	WRITE = 1'b0;
+	WRITE = #200000 1'b1;
+	WRITE = #440000 1'b0;
+	WRITE = #150000 1'b1;
 end 
 
 // ENAUTOADDRESS
 initial
 begin
 	ENAUTOADDRESS = 1'b0;
-	ENAUTOADDRESS = #160000 1'b1;
+	ENAUTOADDRESS = #200000 1'b1;
+	ENAUTOADDRESS = #440000 1'b0;
+	ENAUTOADDRESS = #150000 1'b1;
+	ENAUTOADDRESS = #200000 1'b0;
 end 
 
-// ENCLOCKAUTO
+// Etapa_Unica
+always
+begin
+	Etapa_Unica = 1'b0;
+	Etapa_Unica = #2000 1'b1;
+	#2000;
+end 
+
+// Limpar_Iniciar
 initial
 begin
-	ENCLOCKAUTO = 1'b0;
-	ENCLOCKAUTO = #180000 1'b1;
+	Limpar_Iniciar = 1'b0;
+	Limpar_Iniciar = #10000 1'b1;
+	Limpar_Iniciar = #10000 1'b0;
+	Limpar_Iniciar = #180000 1'b1;
+	Limpar_Iniciar = #10000 1'b0;
+end 
+
+// Manual_Automatico
+initial
+begin
+	Manual_Automatico = 1'b1;
 end 
 endmodule
 
