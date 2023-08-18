@@ -1,0 +1,233 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SIGNAL_NLO",
+					"strict" : false
+				},
+				{
+					"name" : "NCLK",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NLB",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_EU",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_SU",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_EA",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NLA",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NLI",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NCE",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NLM",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_EP",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_CP",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NHLT",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY0",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY1",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY2",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY3",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY4",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY5",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY6",
+					"strict" : false
+				},
+				{
+					"name" : "DISPLAY7",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_NEI",
+					"strict" : false
+				},
+				{
+					"name" : "O7",
+					"strict" : false
+				},
+				{
+					"name" : "O1",
+					"strict" : false
+				},
+				{
+					"name" : "O2",
+					"strict" : false
+				},
+				{
+					"name" : "O4",
+					"strict" : false
+				},
+				{
+					"name" : "O3",
+					"strict" : false
+				},
+				{
+					"name" : "O5",
+					"strict" : false
+				},
+				{
+					"name" : "O6",
+					"strict" : false
+				},
+				{
+					"name" : "O8",
+					"strict" : false
+				},
+				{
+					"name" : "CLR_O",
+					"strict" : false
+				},
+				{
+					"name" : "NCLR_O",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_Q",
+					"strict" : false
+				},
+				{
+					"name" : "REM0",
+					"strict" : false
+				},
+				{
+					"name" : "REM1",
+					"strict" : false
+				},
+				{
+					"name" : "REM2",
+					"strict" : false
+				},
+				{
+					"name" : "REM3",
+					"strict" : false
+				},
+				{
+					"name" : "Limpar_Iniciar",
+					"strict" : false
+				},
+				{
+					"name" : "ENAUTOADDRESS",
+					"strict" : false
+				},
+				{
+					"name" : "WRITE",
+					"strict" : false
+				},
+				{
+					"name" : "D",
+					"strict" : false
+				},
+				{
+					"name" : "B",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				},
+				{
+					"name" : "A",
+					"strict" : false
+				},
+				{
+					"name" : "Etapa_Unica",
+					"strict" : false
+				},
+				{
+					"name" : "Manual_Automatico",
+					"strict" : false
+				},
+				{
+					"name" : "CLKAUTO",
+					"strict" : false
+				},
+				{
+					"name" : "D5",
+					"strict" : false
+				},
+				{
+					"name" : "D6",
+					"strict" : false
+				},
+				{
+					"name" : "D7",
+					"strict" : false
+				},
+				{
+					"name" : "D4",
+					"strict" : false
+				},
+				{
+					"name" : "D0",
+					"strict" : false
+				},
+				{
+					"name" : "D1",
+					"strict" : false
+				},
+				{
+					"name" : "D2",
+					"strict" : false
+				},
+				{
+					"name" : "D3",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

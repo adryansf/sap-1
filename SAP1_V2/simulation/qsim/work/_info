@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Adryan/Capivarias/SAP1/simulation/qsim
+vhard_block
+Z0 !s110 1692322618
+!i10b 1
+!s100 bM72nNO4<Me66>Ta49@T;3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ikb00KS:YUmAFjlZcfXm5`0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Pedro/Desktop/Meus Componentes/SAP1/simulation/qsim
+Z4 w1692322618
+Z5 8SAP1.vo
+Z6 FSAP1.vo
+!i122 286
+L0 8494 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1692322618.000000
+Z9 !s107 SAP1.vo|
+Z10 !s90 -work|work|SAP1.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vSAP1
+R0
+!i10b 1
+!s100 FaU;iTkRgBLi=]ldH?J0e3
+R1
+IeVbIU44]i9J[7n:HeW0RT3
+R2
+R3
+R4
+R5
+R6
+!i122 286
+L0 32 8461
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@s@a@p1
+vSAP1_vlg_vec_tst
+R0
+!i10b 1
+!s100 EmC?DGETJf0A_bFzfScn21
+R1
+Ik8d8NeMS:J8bn2:>A8JSC1
+R2
+R3
+w1692322617
+8Waveform_novo.vwf.vt
+FWaveform_novo.vwf.vt
+!i122 287
+L0 30 295
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform_novo.vwf.vt|
+!s90 -work|work|Waveform_novo.vwf.vt|
+!i113 1
+R11
+R12
+n@s@a@p1_vlg_vec_tst

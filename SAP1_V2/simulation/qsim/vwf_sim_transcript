@@ -1,0 +1,406 @@
+Determining the location of the ModelSim executable...
+
+Using: c:/intelfpga_lite/20.1/modelsim_ase/win32aloem/
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SAP1 -c SAP1 --vector_source="C:/Users/Pedro/Desktop/Meus Componentes/SAP1/Waveform_novo.vwf" --testbench_file="C:/Users/Pedro/Desktop/Meus Componentes/SAP1/simulation/qsim/Waveform_novo.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Thu Aug 17 22:36:57 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SAP1 -c SAP1 --vector_source="C:/Users/Pedro/Desktop/Meus Componentes/SAP1/Waveform_novo.vwf" --testbench_file="C:/Users/Pedro/Desktop/Meus Componentes/SAP1/simulation/qsim/Waveform_novo.vwf.vt"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+07:inst7|inst~0" in design
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Pedro/Desktop/Meus Componentes/SAP1/simulation/qsim/" SAP1 -c SAP1
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Thu Aug 17 22:36:57 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Pedro/Desktop/Meus Componentes/SAP1/simulation/qsim/" SAP1 -c SAP1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file SAP1.vo in folder "C:/Users/Pedro/Desktop/Meus Componentes/SAP1/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4646 megabytes
+    Info: Processing ended: Thu Aug 17 22:36:58 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+C:/Users/Pedro/Desktop/Meus Componentes/SAP1/simulation/qsim/SAP1.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+c:/intelfpga_lite/20.1/modelsim_ase/win32aloem//vsim -c -do SAP1.do
+
+Reading pref.tcl
+
+# 2020.1
+
+# do SAP1.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:36:58 on Aug 17,2023
+# vlog -work work SAP1.vo 
+# -- Compiling module SAP1
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	SAP1
+# End time: 22:36:58 on Aug 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:36:58 on Aug 17,2023
+# vlog -work work Waveform_novo.vwf.vt 
+# -- Compiling module SAP1_vlg_vec_tst
+# 
+# Top level modules:
+# 	SAP1_vlg_vec_tst
+# End time: 22:36:58 on Aug 17,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.SAP1_vlg_vec_tst 
+# Start time: 22:36:58 on Aug 17,2023
+# Loading work.SAP1_vlg_vec_tst
+# Loading work.SAP1
+# Loading work.hard_block
+# Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb
+# Loading fiftyfivenm_ver.fiftyfivenm_io_obuf
+# Loading fiftyfivenm_ver.fiftyfivenm_io_ibuf
+# Loading fiftyfivenm_ver.fiftyfivenm_clkctrl
+# Loading fiftyfivenm_ver.fiftyfivenm_mux41
+# Loading fiftyfivenm_ver.fiftyfivenm_ena_reg
+# Loading altera_ver.dffeas
+# Loading fiftyfivenm_ver.fiftyfivenm_unvm
+# Loading fiftyfivenm_ver.fiftyfivenm_adcblock
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC1~ '.  Expected 8, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /SAP1_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: SAP1.vo Line: 8394
+# ** Warning: (vsim-3722) SAP1.vo(8394): [TFMPC] - Missing connection for port 'clk_dft'.
+# after#26
+# ** Note: $finish    : Waveform_novo.vwf.vt(153)
+#    Time: 1 us  Iteration: 0  Instance: /SAP1_vlg_vec_tst
+# End time: 22:36:59 on Aug 17,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading C:/Users/Pedro/Desktop/Meus Componentes/SAP1/Waveform_novo.vwf...
+
+Reading C:/Users/Pedro/Desktop/Meus Componentes/SAP1/simulation/qsim/SAP1.msim.vcd...
+
+Processing channel transitions... 
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM0|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM0|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM0|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM0|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM0|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM0|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM0|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM0|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM1|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM1|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM1|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM1|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM1|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM1|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM1|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM1|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM2|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM2|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM2|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM2|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM2|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM2|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM2|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM2|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM3|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM3|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM3|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM3|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM3|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM3|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM3|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM3|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM4|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM4|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM4|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM4|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM4|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM4|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM4|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM4|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM5|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM5|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM5|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM5|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM5|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM5|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM5|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM5|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM6|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM6|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM6|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM6|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM6|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM6|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM6|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM6|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM7|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM7|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM7|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM7|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM7|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM7|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM7|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM7|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM8|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM8|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM8|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM8|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM8|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM8|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM8|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM8|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM9|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM9|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM9|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM9|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM9|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM9|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM9|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MM9|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMA|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMA|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMA|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMA|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMA|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMA|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMA|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMA|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMB|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMB|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMB|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMB|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMB|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMB|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMB|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMB|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMC|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMC|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMC|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMC|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMC|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMC|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMC|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMC|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMD|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMD|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMD|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMD|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMD|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMD|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMD|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMD|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MME|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MME|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MME|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MME|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MME|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MME|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MME|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MME|inst7 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMF|inst - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMF|inst1 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMF|inst2 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMF|inst3 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMF|inst4 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMF|inst5 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMF|inst6 - signal not found in VCD.
+
+Warning: ALPRAM16x8:inst10|ALP174xx374:MMF|inst7 - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/Pedro/Desktop/Meus Componentes/SAP1/simulation/qsim/SAP1_20230817223659.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

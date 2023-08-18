@@ -1,0 +1,685 @@
+Analysis & Synthesis report for SAP1
+Thu Aug 17 22:16:06 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Aug 17 22:16:06 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; SAP1                                        ;
+; Top-level Entity Name              ; SAP1                                        ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 372                                         ;
+;     Total combinational functions  ; 340                                         ;
+;     Dedicated logic registers      ; 47                                          ;
+; Total registers                    ; 47                                          ;
+; Total pins                         ; 56                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M08DAF484C8G     ;                    ;
+; Top-level entity name                                            ; SAP1               ; SAP1               ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
+; SAP1.bdf                         ; yes             ; User Block Diagram/Schematic File        ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/SAP1.bdf                        ;         ;
+; controladorsequencializador.bdf  ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/controladorsequencializador.bdf ;         ;
+; alp74ls107.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/alp74ls107.bdf                  ;         ;
+; ri.bdf                           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/ri.bdf                          ;         ;
+; alp74ls173.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/alp74ls173.bdf                  ;         ;
+; contadordeprograma.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/contadordeprograma.bdf          ;         ;
+; alp74ls126.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/alp74ls126.bdf                  ;         ;
+; somadorsubtrator.bdf             ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/somadorsubtrator.bdf            ;         ;
+; alp74ls83.bdf                    ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/alp74ls83.bdf                   ;         ;
+; acumulador.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/acumulador.bdf                  ;         ;
+; ram16x8.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/ram16x8.bdf                     ;         ;
+; ci_74189.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/ci_74189.bdf                    ;         ;
+; alp74ls157.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/alp74ls157.bdf                  ;         ;
+; rem.bdf                          ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/rem.bdf                         ;         ;
+; registradorb.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/registradorb.bdf                ;         ;
+; registradorsaida.bdf             ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/Pedro/Desktop/Meus Componentes/SAP1/registradorsaida.bdf            ;         ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 372         ;
+;                                             ;             ;
+; Total combinational functions               ; 340         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 289         ;
+;     -- 3 input functions                    ; 21          ;
+;     -- <=2 input functions                  ; 30          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 340         ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 47          ;
+;     -- Dedicated logic registers            ; 47          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 56          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; WRITE~input ;
+; Maximum fan-out                             ; 147         ;
+; Total fan-out                               ; 1524        ;
+; Average fan-out                             ; 3.05        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                 ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                      ; Entity Name                 ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+-----------------------------+--------------+
+; |SAP1                                  ; 340 (86)            ; 47 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 56   ; 0            ; 0          ; |SAP1                                                    ; SAP1                        ; work         ;
+;    |ALP74LS157:inst5|                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ALP74LS157:inst5                                   ; ALP74LS157                  ; work         ;
+;    |ContadorDePrograma:inst|           ; 21 (0)              ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst                            ; ContadorDePrograma          ; work         ;
+;       |ALP74LS107:inst3|               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst|ALP74LS107:inst3           ; ALP74LS107                  ; work         ;
+;       |ALP74LS107:inst4|               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst|ALP74LS107:inst4           ; ALP74LS107                  ; work         ;
+;       |ALP74LS107:inst5|               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst|ALP74LS107:inst5           ; ALP74LS107                  ; work         ;
+;       |ALP74LS107:inst|                ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst|ALP74LS107:inst            ; ALP74LS107                  ; work         ;
+;       |ALP74LS126:inst2|               ; 17 (17)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ContadorDePrograma:inst|ALP74LS126:inst2           ; ALP74LS126                  ; work         ;
+;    |ControladorSequencializador:inst3| ; 16 (14)             ; 6 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ControladorSequencializador:inst3                  ; ControladorSequencializador ; work         ;
+;       |ALP74LS107:inst3|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ControladorSequencializador:inst3|ALP74LS107:inst3 ; ALP74LS107                  ; work         ;
+;       |ALP74LS107:inst4|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ControladorSequencializador:inst3|ALP74LS107:inst4 ; ALP74LS107                  ; work         ;
+;       |ALP74LS107:inst5|               ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ControladorSequencializador:inst3|ALP74LS107:inst5 ; ALP74LS107                  ; work         ;
+;       |ALP74LS107:inst6|               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ControladorSequencializador:inst3|ALP74LS107:inst6 ; ALP74LS107                  ; work         ;
+;       |ALP74LS107:inst7|               ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ControladorSequencializador:inst3|ALP74LS107:inst7 ; ALP74LS107                  ; work         ;
+;       |ALP74LS107:inst|                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ControladorSequencializador:inst3|ALP74LS107:inst  ; ALP74LS107                  ; work         ;
+;    |REM:inst4|                         ; 0 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|REM:inst4                                          ; REM                         ; work         ;
+;       |ALP74LS173:inst|                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|REM:inst4|ALP74LS173:inst                          ; ALP74LS173                  ; work         ;
+;    |RI:inst1|                          ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RI:inst1                                           ; RI                          ; work         ;
+;       |ALP74LS173:inst1|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RI:inst1|ALP74LS173:inst1                          ; ALP74LS173                  ; work         ;
+;       |ALP74LS173:inst|                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RI:inst1|ALP74LS173:inst                           ; ALP74LS173                  ; work         ;
+;    |RegistradorB:inst7|                ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RegistradorB:inst7                                 ; RegistradorB                ; work         ;
+;       |ALP74LS173:inst2|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RegistradorB:inst7|ALP74LS173:inst2                ; ALP74LS173                  ; work         ;
+;       |ALP74LS173:inst|                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RegistradorB:inst7|ALP74LS173:inst                 ; ALP74LS173                  ; work         ;
+;    |RegistradorSaida:inst11|           ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RegistradorSaida:inst11                            ; RegistradorSaida            ; work         ;
+;       |ALP74LS173:inst2|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RegistradorSaida:inst11|ALP74LS173:inst2           ; ALP74LS173                  ; work         ;
+;       |ALP74LS173:inst|                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|RegistradorSaida:inst11|ALP74LS173:inst            ; ALP74LS173                  ; work         ;
+;    |SomadorSubtrator:inst6|            ; 46 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|SomadorSubtrator:inst6                             ; SomadorSubtrator            ; work         ;
+;       |ALP74LS83:inst18|               ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|SomadorSubtrator:inst6|ALP74LS83:inst18            ; ALP74LS83                   ; work         ;
+;       |ALP74LS83:inst2|                ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|SomadorSubtrator:inst6|ALP74LS83:inst2             ; ALP74LS83                   ; work         ;
+;    |acumulador:inst100|                ; 4 (4)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|acumulador:inst100                                 ; acumulador                  ; work         ;
+;       |ALP74LS173:inst1|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|acumulador:inst100|ALP74LS173:inst1                ; ALP74LS173                  ; work         ;
+;       |ALP74LS173:inst2|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|acumulador:inst100|ALP74LS173:inst2                ; ALP74LS173                  ; work         ;
+;    |ram16x8:inst15|                    ; 163 (16)            ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15                                     ; ram16x8                     ; work         ;
+;       |ci_74189:inst100|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst100                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst101|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst101                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst102|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst102                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst103|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst103                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst104|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst104                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst105|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst105                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst106|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst106                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst107|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst107                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst108|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst108                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst109|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst109                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst10|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst10                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst110|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst110                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst111|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst111                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst112|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst112                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst113|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst113                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst114|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst114                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst115|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst115                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst116|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst116                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst117|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst117                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst118|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst118                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst119|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst119                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst120|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst120                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst121|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst121                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst122|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst122                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst123|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst123                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst124|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst124                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst125|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst125                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst126|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst126                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst127|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst127                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst128|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst128                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst129|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst129                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst12|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst12                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst130|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst130                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst131|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst131                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst136|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst136                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst137|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst137                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst138|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst138                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst139|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst139                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst13|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst13                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst140|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst140                    ; ci_74189                    ; work         ;
+;       |ci_74189:inst15|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst15                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst16|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst16                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst17|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst17                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst18|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst18                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst19|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst19                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst20|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst20                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst22|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst22                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst23|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst23                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst24|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst24                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst25|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst25                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst26|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst26                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst27|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst27                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst28|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst28                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst29|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst29                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst30|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst30                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst31|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst31                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst32|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst32                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst33|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst33                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst34|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst34                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst35|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst35                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst36|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst36                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst37|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst37                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst38|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst38                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst39|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst39                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst40|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst40                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst41|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst41                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst42|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst42                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst43|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst43                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst44|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst44                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst45|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst45                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst46|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst46                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst47|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst47                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst48|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst48                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst49|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst49                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst4|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst4                      ; ci_74189                    ; work         ;
+;       |ci_74189:inst50|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst50                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst51|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst51                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst52|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst52                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst53|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst53                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst54|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst54                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst55|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst55                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst56|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst56                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst57|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst57                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst58|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst58                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst59|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst59                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst5|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst5                      ; ci_74189                    ; work         ;
+;       |ci_74189:inst61|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst61                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst62|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst62                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst63|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst63                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst64|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst64                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst65|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst65                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst66|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst66                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst67|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst67                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst68|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst68                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst69|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst69                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst6|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst6                      ; ci_74189                    ; work         ;
+;       |ci_74189:inst70|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst70                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst71|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst71                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst72|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst72                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst73|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst73                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst74|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst74                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst75|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst75                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst76|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst76                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst77|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst77                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst78|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst78                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst79|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst79                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst80|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst80                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst81|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst81                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst82|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst82                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst83|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst83                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst84|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst84                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst85|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst85                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst86|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst86                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst87|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst87                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst88|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst88                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst89|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst89                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst8|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst8                      ; ci_74189                    ; work         ;
+;       |ci_74189:inst90|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst90                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst91|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst91                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst92|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst92                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst93|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst93                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst94|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst94                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst95|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst95                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst96|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst96                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst97|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst97                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst98|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst98                     ; ci_74189                    ; work         ;
+;       |ci_74189:inst9|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst9                      ; ci_74189                    ; work         ;
+;       |ci_74189:inst|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SAP1|ram16x8:inst15|ci_74189:inst                       ; ci_74189                    ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+-----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                 ;
++--------------------------------------------------------+-----+
+; Logic Cell Name                                        ;     ;
++--------------------------------------------------------+-----+
+; ram16x8:inst15|ci_74189:inst113|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst111|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst112|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst110|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst108|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst109|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst107|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst4|inst3~0                  ;     ;
+; ram16x8:inst15|ci_74189:inst114|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst120|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst121|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst119|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst117|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst118|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst116|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst115|inst3~0                ;     ;
+; ram16x8:inst15|ci_74189:inst20|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst18|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst19|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst17|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst15|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst16|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst13|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst12|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst22|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst28|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst29|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst27|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst25|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst26|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst24|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst23|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst39|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst37|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst38|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst36|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst34|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst35|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst33|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst10|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst40|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst46|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst30|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst45|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst43|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst44|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst42|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst41|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst68|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst66|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst67|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst65|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst63|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst64|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst62|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst8|inst3~0                  ;     ;
+; ram16x8:inst15|ci_74189:inst69|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst75|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst32|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst74|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst72|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst73|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst71|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst70|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst53|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst51|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst52|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst50|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst48|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst49|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst47|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst9|inst3~0                  ;     ;
+; ram16x8:inst15|ci_74189:inst54|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst61|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst31|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst59|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst57|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst58|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst56|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst55|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst84|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst86|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst85|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst87|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst89|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst88|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst90|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst6|inst3~0                  ;     ;
+; ram16x8:inst15|ci_74189:inst83|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst77|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst76|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst78|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst80|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst79|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst81|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst82|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst97|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst95|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst96|inst3~0                 ;     ;
+; ram16x8:inst15|ci_74189:inst94|inst3~0                 ;     ;
+; Number of logic cells representing combinational loops ; 128 ;
++--------------------------------------------------------+-----+
+Table restricted to first 100 entries. Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 47    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 15    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 40    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 56                          ;
+; cycloneiii_ff         ; 47                          ;
+;     CLR               ; 7                           ;
+;     ENA               ; 32                          ;
+;     ENA CLR           ; 8                           ;
+; cycloneiii_io_obuf    ; 8                           ;
+; cycloneiii_lcell_comb ; 348                         ;
+;     normal            ; 348                         ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 289                         ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 5.19                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Aug 17 22:16:00 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAP1 -c SAP1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file alp74ls283.bdf
+    Info (12023): Found entity 1: ALP74LS283
+Info (12021): Found 1 design units, including 1 entities, in source file sap1.bdf
+    Info (12023): Found entity 1: SAP1
+Info (12127): Elaborating entity "SAP1" for the top level hierarchy
+Warning (275011): Block or symbol "TRI" of instance "inst21" overlaps another block or symbol
+Warning (275011): Block or symbol "TRI" of instance "inst23" overlaps another block or symbol
+Warning (275011): Block or symbol "TRI" of instance "inst25" overlaps another block or symbol
+Warning (275011): Block or symbol "TRI" of instance "inst34" overlaps another block or symbol
+Warning (12125): Using design file controladorsequencializador.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ControladorSequencializador
+Info (12128): Elaborating entity "ControladorSequencializador" for hierarchy "ControladorSequencializador:inst3"
+Warning (275012): Pin "ANEL2" overlaps another pin, block, or symbol
+Warning (275012): Pin "ANEL4" overlaps another pin, block, or symbol
+Warning (275012): Pin "ANEL6" overlaps another pin, block, or symbol
+Warning (12125): Using design file alp74ls107.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALP74LS107
+Info (12128): Elaborating entity "ALP74LS107" for hierarchy "ControladorSequencializador:inst3|ALP74LS107:inst6"
+Warning (12125): Using design file ri.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RI
+Info (12128): Elaborating entity "RI" for hierarchy "RI:inst1"
+Warning (12125): Using design file alp74ls173.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALP74LS173
+Info (12128): Elaborating entity "ALP74LS173" for hierarchy "RI:inst1|ALP74LS173:inst"
+Warning (12125): Using design file contadordeprograma.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ContadorDePrograma
+Info (12128): Elaborating entity "ContadorDePrograma" for hierarchy "ContadorDePrograma:inst"
+Warning (12125): Using design file alp74ls126.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALP74LS126
+Info (12128): Elaborating entity "ALP74LS126" for hierarchy "ContadorDePrograma:inst|ALP74LS126:inst2"
+Warning (12125): Using design file somadorsubtrator.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SomadorSubtrator
+Info (12128): Elaborating entity "SomadorSubtrator" for hierarchy "SomadorSubtrator:inst6"
+Warning (12125): Using design file alp74ls83.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALP74LS83
+Info (12128): Elaborating entity "ALP74LS83" for hierarchy "SomadorSubtrator:inst6|ALP74LS83:inst18"
+Warning (12125): Using design file acumulador.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: acumulador
+Info (12128): Elaborating entity "acumulador" for hierarchy "acumulador:inst100"
+Warning (12125): Using design file ram16x8.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ram16x8
+Info (12128): Elaborating entity "ram16x8" for hierarchy "ram16x8:inst15"
+Warning (275008): Primitive "NOT" of instance "inst144" not used
+Warning (275008): Primitive "AND2" of instance "inst2" not used
+Warning (12125): Using design file ci_74189.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ci_74189
+Info (12128): Elaborating entity "ci_74189" for hierarchy "ram16x8:inst15|ci_74189:inst130"
+Warning (12125): Using design file alp74ls157.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALP74LS157
+Info (12128): Elaborating entity "ALP74LS157" for hierarchy "ALP74LS157:inst5"
+Warning (12125): Using design file rem.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: REM
+Info (12128): Elaborating entity "REM" for hierarchy "REM:inst4"
+Warning (12125): Using design file registradorb.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RegistradorB
+Info (12128): Elaborating entity "RegistradorB" for hierarchy "RegistradorB:inst7"
+Warning (12125): Using design file registradorsaida.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RegistradorSaida
+Info (12128): Elaborating entity "RegistradorSaida" for hierarchy "RegistradorSaida:inst11"
+Info (13014): Ignored 1 buffer(s)
+    Info (13019): Ignored 1 SOFT buffer(s)
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst2|inst17" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst2|inst19" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst2|inst26" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst2|inst28" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst|inst17" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst|inst19" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst|inst26" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RegistradorB:inst7|ALP74LS173:inst|inst28" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RI:inst1|ALP74LS173:inst1|inst17" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RI:inst1|ALP74LS173:inst1|inst19" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RI:inst1|ALP74LS173:inst1|inst26" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "RI:inst1|ALP74LS173:inst1|inst28" feeding internal logic into a wire
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst|inst17" to the node "DISPLAY0" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst|inst19" to the node "DISPLAY1" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst|inst26" to the node "DISPLAY2" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst|inst28" to the node "DISPLAY3" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst2|inst17" to the node "DISPLAY4" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst2|inst19" to the node "DISPLAY5" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst2|inst26" to the node "DISPLAY6" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "RegistradorSaida:inst11|ALP74LS173:inst2|inst28" to the node "DISPLAY7" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "REM:inst4|ALP74LS173:inst|inst17" to the node "REM0" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "REM:inst4|ALP74LS173:inst|inst19" to the node "REM1" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "REM:inst4|ALP74LS173:inst|inst26" to the node "REM2" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "REM:inst4|ALP74LS173:inst|inst28" to the node "REM3" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "REM:inst4|ALP74LS173:inst|inst17" to the node "ALP74LS157:inst5|inst" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "REM:inst4|ALP74LS173:inst|inst19" to the node "ALP74LS157:inst5|inst5" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "REM:inst4|ALP74LS173:inst|inst26" to the node "ALP74LS157:inst5|inst9" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "REM:inst4|ALP74LS173:inst|inst28" to the node "ALP74LS157:inst5|inst14" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst28" to the node "SomadorSubtrator:inst6|ALP74LS83:inst18|45" into a wire
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst19" to the node "SomadorSubtrator:inst6|ALP74LS83:inst18|20" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst17" to the node "SomadorSubtrator:inst6|ALP74LS83:inst18|19" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst28" to the node "SomadorSubtrator:inst6|ALP74LS83:inst2|22" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst26" to the node "SomadorSubtrator:inst6|ALP74LS83:inst2|21" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst19" to the node "SomadorSubtrator:inst6|ALP74LS83:inst2|20" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst1|inst17" to the node "SomadorSubtrator:inst6|ALP74LS83:inst2|19" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|ALP74LS173:inst2|inst26" to the node "SomadorSubtrator:inst6|ALP74LS83:inst18|21" into an OR gate
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "SomadorSubtrator:inst6|inst16" to the node "RegistradorSaida:inst11|ALP74LS173:inst2|inst22" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ContadorDePrograma:inst|ALP74LS126:inst2|inst" to the node "RegistradorSaida:inst11|ALP74LS173:inst|inst20" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ContadorDePrograma:inst|ALP74LS126:inst2|inst2" to the node "RegistradorSaida:inst11|ALP74LS173:inst|inst21" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "acumulador:inst100|inst9" to the node "RegistradorSaida:inst11|ALP74LS173:inst|inst23" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "ContadorDePrograma:inst|ALP74LS126:inst2|inst3" to the node "RegistradorSaida:inst11|ALP74LS173:inst|inst22" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "SomadorSubtrator:inst6|inst14" to the node "RegistradorSaida:inst11|ALP74LS173:inst2|inst20" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "SomadorSubtrator:inst6|inst15" to the node "RegistradorSaida:inst11|ALP74LS173:inst2|inst21" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "SomadorSubtrator:inst6|inst17" to the node "RegistradorSaida:inst11|ALP74LS173:inst2|inst23" into an OR gate
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 436 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 38 output pins
+    Info (21061): Implemented 380 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 73 warnings
+    Info: Peak virtual memory: 4859 megabytes
+    Info: Processing ended: Thu Aug 17 22:16:06 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
+
+
